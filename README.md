@@ -1,1 +1,1 @@
-kostalavista.github.io
+https://kostalavista.github.io/

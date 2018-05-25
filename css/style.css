@@ -11,6 +11,11 @@ h1 {
 h2 {
 	font-size: 22px;
 }
+h3 {
+	font-size: 22px;
+	text-align: center;
+	color: #5b5b5b;
+}
 a {
 	text-decoration: underline;
 	color: #202020;
