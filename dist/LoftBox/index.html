@@ -1,0 +1,1412 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>LoftBox - головы животных из бумаги</title>
+	
+	<meta name="Description" content="11 моделей, 6 цветов и 3 года гарантии. При заказе 2х наборов вы получите 3й в подарок! Доставка по РФ.">
+
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mobile.css">
+	<link rel="stylesheet" href="css/fotorama.css" media="all">
+	<link rel="stylesheet" href="css/fm.revealator.jquery.css" media="all">
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+	your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="popup make-call">
+	<div class="popup__content">
+		<form action="" method="post">
+			<img class="popup__close" src="img/close.png" alt="close">
+			<div class="popup__title">Заказать звонок</div>
+			<div><input name="nameperson" type="text" required placeholder="Ваше имя *"></div>
+			<div><input name="phone" type="text" required placeholder="Ваш телефон *"></div>
+			<div class="polit">
+				<input class="polit__check-box" type="checkbox" required>
+				<div class="polit__text">
+					Cогласен с <a class="link" href="conf.pdf" target="_blank">политикой конфиденциальности</a> *
+				</div>
+			</div>
+			<div class="center">
+				<input type="submit" class="callback callback_padding js-mail" value="Отправить">
+			</div>
+			<div class="text_small">Поля отмеченные * обязательны для заполнения.</div>
+		</form>
+	</div>
+	<div class="helper"></div>
+</div>
+
+<div class="popup make-call-details">
+	<div class="popup__content">
+		<form action="" method="post">
+			<img class="popup__close" src="img/close.png" alt="close">
+			<div class="popup__title">Узнать подробности</div>
+			<div><input name="nameperson" type="text" required placeholder="Ваше имя *"></div>
+			<div><input name="phone" type="text" required placeholder="Ваш телефон *"></div>
+			<div><input name="email" type="text" placeholder="Ваш email *"></div>
+			<div class="polit">
+				<input class="polit__check-box" type="checkbox" required>
+				<div class="polit__text">
+					Cогласен с <a class="link" href="conf.pdf" target="_blank">политикой конфиденциальности</a> *
+				</div>
+			</div>
+			<div class="center">
+				<input type="submit" class="callback callback_padding js-mail" value="Отправить">
+			</div>
+			<div class="text_small">Поля отмеченные * обязательны для заполнения.</div>
+		</form>
+	</div>
+	<div class="helper"></div>
+</div>
+
+<div class="popup make-call-basket basket">
+	<div class="popup__content">
+		<form action="" method="post">
+			<img class="popup__close" src="img/close.png" alt="close">
+			<div class="popup__title">КОРЗИНА</div>
+			<div class="basket__product">
+				<div class="basket__empty">В корзине пусто</div>
+			</div>
+			<div class="basket__bonus">
+				Вы заказали два набора Loft Box и по условиям акции можете выбрать третий набор в подарок.
+				Просто добавьте в корзину еще один набор.
+			</div>
+			<div class="basket__price-block">
+				<div class="basket__price-product">
+					<div>Стоимость товара:</div>
+					<span>0 руб.</span>
+				</div>
+				<!--<div class="basket__price-delivery">
+					<div>Доставка:</div>
+					<span>0 руб.</span>
+				</div>-->
+				
+				<p style="font-size: 14px; color: #aeaeae; ">Доставка от 290 р. <br/>
+				Стоимость уточняется по телефону.</p>
+				<!--<div class="basket__price-total">
+					<div>Итого:</div>
+					<span>0 руб.</span>
+				</div>-->
+			</div>
+			<div><input name="nameperson" type="text" required placeholder="Ваши имя и фамилия*"></div>
+			<div><input name="email" type="text" required placeholder="Ваш email *"></div>
+			<div><input name="phone" type="text" required placeholder="Ваш телефон *"></div>
+			<div><input name="address" type="text" required placeholder="Адрес доставки *"></div>
+			<div class="polit">
+				<input class="polit__check-box" type="checkbox" required>
+				<div class="polit__text">
+					Cогласен с <a class="link" href="conf.pdf" target="_blank">политикой конфиденциальности</a> *
+				</div>
+			</div>
+			<div class="center">
+				<input onclick="yaCounter46313061.reachGoal('korzina'); return true;" type="submit" class="callback callback_padding js-mail" value="Отправить">
+			</div>
+			<div class="text_small">Поля отмеченные * обязательны для заполнения.</div>
+		</form>
+	</div>
+	<div class="helper"></div>
+</div>
+
+<header class="header-mob header_top js-header">
+	<div class="logo-img"></div>
+	<div class="menu-group_mob">
+		<div class="cart-mob">
+			<img class="js-make-call-basket cart-empty cart-icon_active" src="img/basket.png" alt="basket">
+			<div class="js-make-call-basket cart-full">
+				<img class="cart-full__img" src="img/basket_full.png" alt="basket">
+				<div class="cart-full__count">2</div>
+			</div>
+		</div>
+		<div class="menu-mob js-menu-mob"></div>
+	</div>
+</header>
+
+<nav class="nav-group-mob">
+	<div class="feedback nav-group-mob__feedback">
+		<div class="feedback__phone">+7 (495) 514-89-38</div>
+		<div class="callback js-make-call">Заказать звонок</div>
+	</div>
+	<div class="hr"></div>
+	<div class="nav-mob">
+		<a class="active" href="#nav1">
+			<div class="nav-mob__text">Что такое LoftBox</div>
+		</a>
+		<a class="active" href="#nav2">
+			<div class="nav-mob__text">Что в наборе</div>
+		</a>
+		<a class="active" href="#nav3">
+			<div class="nav-mob__text">Выбор головы</div>
+		</a>
+		<a class="active" href="#nav5">
+			<div class="nav-mob__text">Идеальный подарок</div>
+		</a>
+		<a class="active" href="#nav4">
+			<div class="nav-mob__text">Как собирать</div>
+		</a>
+		<a class="active" href="#nav6">
+			<div class="nav-mob__text">Готовые головы</div>
+		</a>
+		<a class="active" href="#nav7">
+			<div class="nav-mob__text">Как мы создаем головы</div>
+		</a>
+		<a class="active" href="#nav8">
+			<div class="nav-mob__text">Отзывы</div>
+		</a>
+		<a class="active" href="#nav9">
+			<div class="nav-mob__text">Доставка</div>
+		</a>
+		<a class="active" href="#nav10">
+			<div class="nav-mob__text">Оптовые заказы</div>
+		</a>
+		<a class="active" href="#nav11">
+			<div class="nav-mob__text">Контакты</div>
+		</a>
+	</div>
+</nav>
+
+<header class="header header_top header_offset-left js-header header-desc">
+	<div class="logo">
+		<div class="logo-img"></div>
+		<div class="logo__text">Наборы для сборки<br>полигональных фигур из бумаги</div>
+	</div>
+	<div class="feedback">
+		<div class="feedback__phone">+7 (495) 514-89-38</div>
+		<div class="callback js-make-call">Заказать звонок</div>
+	</div>
+</header>
+
+<nav class="nav-group">
+	<div class="menu-group">
+		<img class="menu js-toggle-nav" src="img/burger.png" alt="burger">
+		<div class="cart">
+			<img class="js-make-call-basket cart-empty cart-icon_active" src="img/basket.png" alt="basket">
+			<div class="js-make-call-basket cart-full">
+				<img class="cart-full__img" src="img/basket_full.png" alt="basket">
+				<div class="cart-full__count">2</div>
+			</div>
+		</div>
+	</div>
+	<div id="nav-desc" class="nav nav_hidden js-nav">
+		<a class="active" href="#nav1">
+			<div class="nav__item nav__item_active nav__item_first nav__item_first-active">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Что такое LoftBox</div>
+			</div>
+		</a>
+		<a href="#nav2">
+			<div class="nav__item">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Что в наборе</div>
+			</div>
+		</a>
+		<a href="#nav3">
+			<div class="nav__item">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Выбор головы</div>
+			</div>
+		</a>
+		<a href="#nav5">
+			<div class="nav__item">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Идеальный подарок</div>
+			</div>
+		</a>
+		<a href="#nav4">
+			<div class="nav__item">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Как собирать</div>
+			</div>
+		</a>
+		<a href="#nav6">
+			<div class="nav__item">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Готовые головы</div>
+			</div>
+		</a>
+		<a href="#nav7">
+			<div class="nav__item">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Как мы создаем головы</div>
+			</div>
+		</a>
+		<!--<a href="#nav8">
+			<div class="nav__item">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Отзывы</div>
+			
+		</a></div>-->
+		<a href="#nav9">
+			<div class="nav__item">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Доставка</div>
+			</div>
+		</a>
+		<!--<a href="#nav10">
+			<div class="nav__item">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Оптовые заказы</div>
+			</div>
+		</a>-->
+		<a href="#nav11">
+			<div class="nav__item">
+				<div class="nav__img-wrap"></div>
+				<div class="nav__separator"></div>
+				<div class="nav__text">Контакты</div>
+			</div>
+		</a>
+	</div>
+</nav>
+
+<div class="content-without-nav">
+	<section class="section1">
+		<div class="content first-screen">
+			<div class="slogan">
+				Наборы для сборки<br>
+				полигональных фигур из бумаги
+			</div>
+			<h1 class="h1 revealator-slidedown revealator-once">Декоративные головы Loft Box</h1>
+			<h3 class="h3 h3-first revealator-slidedown revealator-once revealator-delay1">увлекательный подарок,
+				который преобразит любой интерьер</h3>
+			<img class="section1__main-img" src="img/section1__roga.png" alt="roga">
+			<div class="advantages revealator-slidedown revealator-once revealator-delay10">
+				<div class="li">
+					<img class="li__img" src="img/dot_f.png" alt="dot">
+					Для детей и взрослых
+				</div>
+				<div class="li">
+					<img class="li__img" src="img/dot_f.png" alt="dot">
+					Из итальянской дизайнерской бумаги
+				</div>
+				<div class="li">
+					<img class="li__img" src="img/dot_f.png" alt="dot">
+					С доставкой по всей России
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="make-order revealator-slidedown revealator-once revealator-delay2">
+				<div class="make-order__item1">Закажите набор Loft Box<br>прямо сейчас!</div>
+				<div class="make-order__item2">1+1=3</div>
+				<div class="make-order__item3">При заказе 2 наборов вы получите<br>третий в подарок!</div>
+				<div class="callback callback_yellow js-select-model">Выбрать модель</div>
+			</div>
+		</div>
+	</section>
+	<section id="nav1" class="section2">
+		<div class="content">
+			<h2 class="h2">Что такое полигональная<br>фигура Loft Box</h2>
+			<div class="section2__block1">
+				<img class="section2__img1" src="img/section2_bl1.png" alt="bl">
+				<div class="about revealator-slideright revealator-once">
+					Полигональные фигуры Loft Box — набор для сборки декоративных голов животных, которые выполнены из
+					прочной дизайнерской бумаги.
+					<br><br>
+					Такая голова украсит интерьер любого помещения, а ее сборка — увлекательный процесс для детей и
+					взрослых.
+				</div>
+			</div>
+			<div id="nav2" class="title-triple section2__second-title">
+				<div class="title-triple__item">В наборе Loft Box</div>
+				<div class="separator_vert"></div>
+				<div class="title-triple__item">вы найдете</div>
+			</div>
+			<div class="contains">
+				<div class="contains__block">
+					<div class="desc desc_right revealator-slideright revealator-once">
+						<div class="cursor"></div>
+						<div class="desc__group">
+							<div class="desc__title">развертку</div>
+							<div class="desc__content">Бумажная развертка для самостоятельной сборки полигональной головы
+							</div>
+						</div>
+					</div>
+					<div class="desc desc_right revealator-slideright revealator-once revealator-delay1">
+						<div class="cursor"></div>
+						<div class="desc__group">
+							<div class="desc__title">Инструкцию</div>
+							<div class="desc__content">Наглядное пособие по склейке макета</div>
+						</div>
+					</div>
+				</div>
+				<img class="contains__main-img" src="img/section2_bl2.png" alt="contains">
+				<div class="contains__block">
+					<div class="desc revealator-slideleft revealator-once revealator-delay2">
+						<div class="cursor"></div>
+						<div class="desc__group">
+							<div class="desc__title">НОЖ</div>
+							<div class="desc__content">Канцелярский нож удобен в использовании и безопасен</div>
+						</div>
+					</div>
+					<div class="desc revealator-slideleft revealator-once revealator-delay3">
+						<div class="cursor"></div>
+						<div class="desc__group">
+							<div class="desc__title">линейку</div>
+							<div class="desc__content">Удобная линейка всегда под рукой!</div>
+						</div>
+					</div>
+					<div class="desc revealator-slideleft revealator-once revealator-delay4">
+						<div class="cursor"></div>
+						<div class="desc__group">
+							<div class="desc__title">клей</div>
+							<div class="desc__content">Клей в комлпекте не содержит талуол и безопасен для Вашего ребенка</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section4">
+		<div class="content">
+			<div class="section4__group">
+				<div>
+					<div class="title-new revealator-fade revealator-once">
+						Декоративные головы животных
+						<div class="title-new__separator"></div>
+						Тренд 2017 года
+					</div>
+					<div class="section4__text revealator-fade revealator-delay1 revealator-once">
+						Стильные изысканные фигуры из картона украсят интерьер любой квартиры или офиса. В 2017 году это
+						один из
+						главных трендов в сфере дизайна помещений. Таким образом, вы получаете не только конструктор, но
+						и яркий
+						элемент дизайна в вашу квартиру или офис.
+					</div>
+				</div>
+				<img class="section4__main-img revealator-fade revealator-delay2 revealator-once "
+					 src="img/section4__main-img.png" alt="roga">
+			</div>
+		</div>
+	</section>
+
+	<section id="nav3" class="section5">
+		<div class="content">
+			<h2 class="h2 section5__h2">Какие декоративные головы мы вам предлагаем</h2>
+			<div class="product-mob">
+				<div class="product-mob__block">
+					<img class="product-mob__img" src="img/select__item1.jpg">
+					<div class="product-mob__title">Голова слона</div>
+					<div class="product-mob__price">1190 руб.</div>
+					<img class="product-mob__add-to-cart" src="img/add-to-cart.png">
+				</div>
+				<div class="product-mob__block">
+					<img class="product-mob__img" src="img/select__item2.jpg">
+					<div class="product-mob__title">Голова единорога</div>
+					<div class="product-mob__price">1190 руб.</div>
+					<img class="product-mob__add-to-cart" src="img/add-to-cart.png">
+				</div>
+				<div class="product-mob__block">
+					<img class="product-mob__img" src="img/select__item3.jpg">
+					<div class="product-mob__title">Голова барана</div>
+					<div class="product-mob__price">1190 руб.</div>
+					<img class="product-mob__add-to-cart" src="img/add-to-cart.png">
+				</div>
+				<div class="product-mob__block">
+					<img class="product-mob__img" src="img/select__item4.jpg">
+					<div class="product-mob__title">Голова носорога</div>
+					<div class="product-mob__price">1190 руб.</div>
+					<img class="product-mob__add-to-cart" src="img/add-to-cart.png">
+				</div>
+				<div class="product-mob__block">
+					<img class="product-mob__img" src="img/select__item5.jpg">
+					<div class="product-mob__title">Голова оленя</div>
+					<div class="product-mob__price">1990 руб.</div>
+					<img class="product-mob__add-to-cart" src="img/add-to-cart.png">
+				</div>
+				<div class="product-mob__block">
+					<img class="product-mob__img" src="img/select__item6.jpg">
+					<div class="product-mob__title">Голова льва</div>
+					<div class="product-mob__price">1190 руб.</div>
+					<img class="product-mob__add-to-cart" src="img/add-to-cart.png">
+				</div>
+				<div class="product-mob__block">
+					<img class="product-mob__img" src="img/select__item7.jpg">
+					<div class="product-mob__title">Голова пантеры</div>
+					<div class="product-mob__price">1190 руб.</div>
+					<img class="product-mob__add-to-cart" src="img/add-to-cart.png">
+				</div>
+				<div class="product-mob__block">
+					<img class="product-mob__img" src="img/select__item8.jpg">
+					<div class="product-mob__title">Голова динозавра</div>
+					<div class="product-mob__price">1190 руб.</div>
+					<img class="product-mob__add-to-cart" src="img/add-to-cart.png">
+				</div>
+			
+			</div>
+			<div class="product product-desktop">
+				<div class="product__left">
+					<img class="product__item revealator-once revealator-fade revealator-delay1 revealator-duration4"
+						 src="img/select__item1.jpg" alt="product">
+					<img class="product__item revealator-once revealator-fade revealator-delay2 revealator-duration4"
+						 src="img/select__item2.jpg" alt="product">
+					<img class="product__item revealator-once revealator-fade revealator-delay5 revealator-duration4"
+						 src="img/select__item5.jpg" alt="product">
+					<img class="product__item revealator-once revealator-fade revealator-delay6 revealator-duration4"
+						 src="img/select__item6.jpg" alt="product">
+				</div>
+				<div class="product__center-wrap">
+					<div class="product__center">
+						<img class="popup__close" src="img/close.png" alt="close">
+						<div class="slider slider1">
+							<div class="fotorama" data-width="420" data-fit="cover" data-arrows="false"
+								 data-click="false" data-swipe="true">
+								<div class="slide">
+									<img class="slide__img" src="img/select__item1.png" alt="slide">
+								</div>
+							</div>
+							<div class="product__description">
+								<div class="product__title">Голова Слона</div>
+								<div class="product__price">1 190 руб.</div>
+								<div class="product__text">
+									Размер: 45 См
+									<br>
+									<br>Уровень сложности: средний.
+									<br>Особенную сложность представляет склейка бивней, тут надо запастись
+									терпением.
+									<br>
+									<br>Время сборки: 5-6 часов.
+								</div>
+								<select class="select" name="color">
+									<option value="default">Цвет: Выбрать</option>
+								
+									<option value="blue">Синий с белым</option>
+								</select>
+								<div class="product__count">
+									Количество:
+									<img class="product-count-down" src="img/arrow_down.png" alt="down">
+									<span class="product-count">1</span>
+									<img class="product-count-up" src="img/arrow_up.png" alt="up">
+								</div>
+								<div class="callback js-add-to-cart">Добавить в корзину</div>
+								<div class="go-to-cart js-make-call-basket">перейти в козрину</div>
+							</div>
+						</div>
+						<div class="slider slider2">
+							<div class="fotorama" data-width="420" data-fit="cover" data-arrows="false"
+								 data-click="false" data-swipe="true">
+								<div class="slide">
+									<img class="slide__img" src="img/select__item2.png" alt="slide">
+								</div>
+							</div>
+							<div class="product__description">
+								<div class="product__title">Голова Единорога</div>
+								<div class="product__price">1 350 руб.</div>
+								<div class="product__text">
+									Размер: 45 См
+									<br>
+									<br>Уровень сложности: средний.
+									<br>
+									<br>
+									<br>Время сборки: 5-6 часов.
+								</div>
+								<select class="select" name="color">
+									<option value="default">Цвет: Выбрать</option>
+									<option value="green">Белый</option>
+									
+								</select>
+								<div class="product__count">
+									Количество:
+									<img class="product-count-down" src="img/arrow_down.png" alt="down">
+									<span class="product-count">1</span>
+									<img class="product-count-up" src="img/arrow_up.png" alt="up">
+								</div>
+								<div class="callback js-add-to-cart">Добавить в корзину</div>
+								<div class="go-to-cart js-make-call-basket">перейти в козрину</div>
+							</div>
+						</div>
+						<div class="slider slider3">
+							<div class="fotorama" data-width="420" data-fit="cover" data-arrows="false"
+								 data-click="false" data-swipe="true">
+								<div class="slide">
+									<img class="slide__img" src="img/select__item3.png" alt="slide">
+								</div>
+							</div>
+					<div class="product__description">
+								<div class="product__title">Голова Барана</div>
+								<div class="product__price">1 190 руб.</div>
+								<div class="product__text">
+									Размер: 45 См
+									<br>
+									<br>Уровень сложности: сложный.
+									<br>Особенную сложность представляет склейка ветвей рогов и ушей, тут надо запастись
+									терпением.
+									<br>
+									<br>Время сборки: 5-6 часов.
+								</div>
+								<select class="select" name="color">
+									<option value="default">Цвет: Выбрать</option>
+									<option value="green">Белый</option>
+								
+								</select>
+								<div class="product__count">
+									Количество:
+									<img class="product-count-down" src="img/arrow_down.png" alt="down">
+									<span class="product-count">1</span>
+									<img class="product-count-up" src="img/arrow_up.png" alt="up">
+								</div>
+								<div class="callback js-add-to-cart">Добавить в корзину</div>
+								<div class="go-to-cart js-make-call-basket">перейти в козрину</div>
+							</div>
+						</div>
+						<div class="slider slider4">
+							<div class="fotorama" data-width="420" data-fit="cover" data-arrows="false"
+								 data-click="false" data-swipe="true">
+								<div class="slide">
+									<img class="slide__img" src="img/select__item4.png" alt="slide">
+								</div>
+							</div>
+							<div class="product__description">
+								<div class="product__title">Голова Носорога</div>
+								<div class="product__price">1 190 руб.</div>
+								<div class="product__text">
+									Размер: 70 См
+									<br>
+									<br>Уровень сложности: сложный.
+									<br>
+									<br>Время сборки: 5-6 часов.
+								</div>
+								<select class="select" name="color">
+									<option value="default">Цвет: Выбрать</option>
+									<option value="green">Серый</option>
+									
+								</select>
+								<div class="product__count">
+									Количество:
+									<img class="product-count-down" src="img/arrow_down.png" alt="down">
+									<span class="product-count">1</span>
+									<img class="product-count-up" src="img/arrow_up.png" alt="up">
+								</div>
+								<div class="callback js-add-to-cart">Добавить в корзину</div>
+								<div class="go-to-cart js-make-call-basket">перейти в козрину</div>
+							</div>
+						</div>
+						<div class="slider slider5">
+							<div class="fotorama" data-width="420" data-fit="cover" data-arrows="false"
+								 data-click="false" data-swipe="true">
+								<div class="slide">
+									<img class="slide__img" src="img/select__item5.png" alt="slide">
+								</div>
+							</div>
+							<div class="product__description">
+								<div class="product__title">Голова Оленя большая</div>
+								<div class="product__price">1 990 руб.</div>
+								<div class="product__text">
+									Размер: 70 См
+									<br>
+									<br>Уровень сложности: сложный.
+									<br>Особенную сложность представляет склейка ветвей рогов и ушей, тут надо запастись
+									терпением.
+									<br>
+									<br>Время сборки: 6-8 часов.
+								</div>
+								<select class="select" name="color">
+									<option value="default">Цвет: Выбрать</option>
+									<option value="green">Коричневый</option>
+								
+								</select>
+								<div class="product__count">
+									Количество:
+									<img class="product-count-down" src="img/arrow_down.png" alt="down">
+									<span class="product-count">1</span>
+									<img class="product-count-up" src="img/arrow_up.png" alt="up">
+								</div>
+								<div class="callback js-add-to-cart">Добавить в корзину</div>
+								<div class="go-to-cart js-make-call-basket">перейти в козрину</div>
+							</div>
+						</div>
+						<div class="slider slider6">
+							<div class="fotorama" data-width="420" data-fit="cover" data-arrows="false"
+								 data-click="false" data-swipe="true">
+								<div class="slide">
+									<img class="slide__img" src="img/select__item6.png" alt="slide">
+								</div>
+							</div>
+							<div class="product__description">
+								<div class="product__title">Голова Льва</div>
+								<div class="product__price">1 190 руб.</div>
+								<div class="product__text">
+									Размер: 45 См
+									<br>
+									<br>Уровень сложности: легкий.
+									<br>
+									<br>
+									<br>Время сборки: 3-4 часов.
+								</div>
+								<select class="select" name="color">
+									<option value="default">Цвет: Выбрать</option>
+									<option value="green">Белый</option>
+									
+								</select>
+								<div class="product__count">
+									Количество:
+									<img class="product-count-down" src="img/arrow_down.png" alt="down">
+									<span class="product-count">1</span>
+									<img class="product-count-up" src="img/arrow_up.png" alt="up">
+								</div>
+								<div class="callback js-add-to-cart">Добавить в корзину</div>
+								<div class="go-to-cart js-make-call-basket">перейти в козрину</div>
+							</div>
+						</div>
+						<div class="slider slider7">
+							<div class="fotorama" data-width="420" data-fit="cover" data-arrows="false"
+								 data-click="false" data-swipe="true">
+								<div class="slide">
+									<img class="slide__img" src="img/select__item7.png" alt="slide">
+								</div>
+							</div>
+							<div class="product__description">
+								<div class="product__title">Голова Пантеры</div>
+								<div class="product__price">1 190 руб.</div>
+								<div class="product__text">
+									Размер: 45 См
+									<br>
+									<br>Уровень сложности: легкий.
+									<br>
+									<br>
+									<br>Время сборки: 3-4 часов.
+								</div>
+								<select class="select" name="color">
+									<option value="default">Цвет: Выбрать</option>
+									<option value="green">Розовый</option>
+									
+								</select>
+								<div class="product__count">
+									Количество:
+									<img class="product-count-down" src="img/arrow_down.png" alt="down">
+									<span class="product-count">1</span>
+									<img class="product-count-up" src="img/arrow_up.png" alt="up">
+								</div>
+								<div class="callback js-add-to-cart">Добавить в корзину</div>
+								<div class="go-to-cart js-make-call-basket">перейти в козрину</div>
+							</div>
+						</div>
+						<div class="slider slider8">
+							<div class="fotorama" data-width="420" data-fit="cover" data-arrows="false"
+								 data-click="false" data-swipe="true">
+								<div class="slide">
+									<img class="slide__img" src="img/select__item8.png" alt="slide">
+								</div>
+							</div>
+							<div class="product__description">
+								<div class="product__title">Голова Динозавра</div>
+								<div class="product__price">1 190 руб.</div>
+								<div class="product__text">
+									Размер: 45 См
+									<br>
+									<br>Уровень сложности: сложный.
+									<br>Особенную сложность представляет склейка зубов, тут надо запастись
+									терпением.
+									<br>
+									<br>Время сборки: 5-6 часов.
+								</div>
+								<select class="select" name="color">
+									<option value="default">Цвет: Выбрать</option>
+									<option value="green">Белый</option>
+									
+								</select>
+								<div class="product__count">
+									Количество:
+									<img class="product-count-down" src="img/arrow_down.png" alt="down">
+									<span class="product-count">1</span>
+									<img class="product-count-up" src="img/arrow_up.png" alt="up">
+								</div>
+								<div class="callback js-add-to-cart">Добавить в корзину</div>
+								<div class="go-to-cart js-make-call-basket">перейти в козрину</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product__right">
+					<img class="product__item revealator-once revealator-fade revealator-delay3 revealator-duration4"
+						 src="img/select__item3.jpg" alt="product">
+					<img class="product__item revealator-once revealator-fade revealator-delay4 revealator-duration4"
+						 src="img/select__item4.jpg" alt="product">
+					<img class="product__item revealator-once revealator-fade revealator-delay7 revealator-duration4"
+						 src="img/select__item7.jpg" alt="product">
+					<img class="product__item revealator-once revealator-fade revealator-delay8 revealator-duration4"
+						 src="img/select__item8.jpg" alt="product">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section6">
+		<div class="content">
+			<div class="title-triple section6__title">
+				<div
+					class="title-triple__item title-triple__item_big revealator-fade revealator-once revealator-delay0 revealator-duration5">
+					Закажите 2 набора loft Box
+				</div>
+				<div
+					class="separator_vert separator_vert_white revealator-fade revealator-once revealator-delay1 revealator-duration5"></div>
+				<div
+					class="title-triple__item title-triple__item_big revealator-fade revealator-once revealator-delay2 revealator-duration5">
+					И получите третий в подарок
+				</div>
+			</div>
+			<div class="center">
+				<div
+					class="callback callback_transparent js-select-model revealator-slideup revealator-once revealator-delay3">
+					Выбрать модель
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section7">
+		<div class="content">
+			<div class="quality-group">
+				<h2 class="h2">Более 1000 клиентов<br>оценили качество голов Loft Box</h2>
+				<div class="quality-wrap">
+					<div class="quality revealator-once revealator-slideright revealator-delay1">
+						<div class="quality__title">11 моделей</div>
+						<div class="quality__desc">
+							Декоративных голов Loft Box доступны для заказа
+						</div>
+					</div>
+					<div class="quality revealator-once revealator-slideright revealator-delay2">
+						<div class="quality__title">6 цветов</div>
+						<div class="quality__desc">
+							На выбор, для соответствия вашему интерьеру
+						</div>
+					</div>
+					<div class="quality revealator-once revealator-slideright revealator-delay3">
+						<div class="quality__title">до 6 часов</div>
+						<div class="quality__desc">
+							Удовольствия от сборки одной полигональной фигуры
+						</div>
+					</div>
+					<div class="quality revealator-once revealator-slideright revealator-delay4">
+						<div class="quality__title">3 года</div>
+						<div class="quality__desc">
+							Голова гарантировано сохранит свой первоначальный вид
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="nav5" class="what-for">
+				<h2 class="h2">Головы LoftBox
+					идеально подойдут Вам
+					для того что бы</h2>
+				<div class="prez-wrap">
+					<div class="prez revealator-slidedown revealator-once revealator-delay1">
+						<img class="prez__img" src="img/whatfor1.jpg" alt="w">
+						<div class="prez__desc">
+							<div class="prez__title">Украсить</div>
+							<div class="prez__text">
+								Хотите украсить помещение необычным элементом декора
+							</div>
+						</div>
+					</div>
+					<div class="prez revealator-slidedown revealator-once revealator-delay2">
+						<img class="prez__img" src="img/whatfor2.jpg" alt="w">
+						<div class="prez__desc">
+							<div class="prez__title">Подарить</div>
+							<div class="prez__text">
+								Ищете интересный подарок друзьям или близким
+							</div>
+						</div>
+					</div>
+					<div class="prez revealator-slidedown revealator-once revealator-delay3">
+						<img class="prez__img" src="img/whatfor3.jpg" alt="w">
+						<div class="prez__desc">
+							<div class="prez__title">Развлечь</div>
+							<div class="prez__text">
+								Намерены удивить своего ребенка увлекательной игрушкой
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="title-triple">
+				<div class="separator_vert"></div>
+				<div class="title-triple__item title-triple__item_long">Подарок для Детей и взрослых</div>
+			</div>
+			<div class="gift">
+				<img class="gift__img" src="img/gift__img.jpg" alt="gift">
+				<div class="gift__group">
+					<div class="gift__title">Декоративные головы Loft Box</div>
+					<div class="gift__desc">
+						Фигуры Loft Box — не только элемент декора, но и занимательный конструктор, который интересно
+						собирать самому или в веселой компании.
+						<br>Кроме того, фигуры выполнены из природных материалов и безопасны для организма. Клей в
+						комплекте
+						не содержит толуол и безопасен для вас и вашего ребенка.
+						<br>Наборы Loft Box подойдут детям от 10 лет (от 6 до 10 лет — при сопровождении родителей).
+					</div>
+				</div>
+			</div>
+			<h2 id="nav4" class="h2">Как собрать<br>декоративную голову</h2>
+			<div class="how-made">
+				<div class="how-made__instruction">
+					<div class="how-made__item revealator-slideright revealator-once revealator-delay1">
+						<div class="how-made__num">01</div>
+						<div class="separator_blue"></div>
+						<div class="how-made__text">
+							Внимательно изучите развертку (схему-чертеж), которая нанесена на
+							специальную плотную бумагу и разрежьте ее на детали для комфортной работы.
+						</div>
+					</div>
+					<div class="how-made__item revealator-slideright revealator-once revealator-delay2">
+						<div class="how-made__num">02</div>
+						<div class="separator_blue"></div>
+						<div class="how-made__text">
+							Вырежьте каждый элемент по линиям с помощью линейки
+							и канцелярского ножа.
+						</div>
+					</div>
+					<div class="how-made__item revealator-slideright revealator-once revealator-delay3">
+						<div class="how-made__num">03</div>
+						<div class="separator_blue"></div>
+						<div class="how-made__text">
+							Согните детали в обозначенных местах и склейте специальным клеем.
+						</div>
+					</div>
+				</div>
+				<img class="how-made__image" src="img/how-made.png">
+			</div>
+			<div class="bonus">
+				<div class="bonus__block1">
+					<div class="title-triple bonus__treug">
+						<div class="title-triple__item title-triple__item_m">Закажите 2 набора loft Box</div>
+						<div class="separator_vert separator_vert_white"></div>
+						<div class="title-triple__item title-triple__item_m">И получите третий в подарок</div>
+					</div>
+					<div class="callback js-select-model">ВЫБРАТЬ МОДЕЛЬ</div>
+				</div>
+				<img class="bonus__block2" src="img/bonus_good.png">
+			</div>
+		</div>
+	</section>
+
+	<section id="nav6" class="section8">
+		<div class="content">
+			<h2 class="h2 h2_yellow h2_left">
+				Закажите собранную голову<br>Loft Box для украшения<br>интерьера
+			</h2>
+			<div class="section8__article">
+				Есть желание украсить интерьер фигурами LoftBox, но нет времени собрать голову самостоятельно?
+				<br><br>
+				Не проблема! Мы сделаем это за вас!
+				
+			</div>
+			<div class="callback callback_yellow js-select-model">ВЫБРАТЬ МОДЕЛЬ</div>
+		</div>
+	</section>
+
+	<section id="nav7" class="section9">
+		<div class="content">
+			<h2 class="h2">Как мы создаем наборы Loft Box</h2>
+			<div class="section9__row">
+				<img class="section9__img revealator-slidedown revealator-once revealator-delay1 revealator-duration6"
+					 src="img/section9__img1.jpg" alt="sec">
+				<div
+					class="cursor cursor_big revealator-slidedown revealator-once revealator-delay2 revealator-duration6"></div>
+				<div class="desc revealator-slidedown revealator-once revealator-delay2 revealator-duration6">
+					<div class="desc__group desc__group_big">
+						<div class="desc__title">Разрабатываем дизайн головы при помощи 3D-моделирования.</div>
+						<div class="desc__content">Макеты всех фигур разработаны с нуля профессиональным дизайнером при
+							помощи 3D-моделирования.<br>Каждый изгиб идеально подогнан, что придает декоративной голове
+							эстетичный вид.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section9__row">
+				<div
+					class="desc desc_right revealator-slidedown revealator-once revealator-delay1 revealator-duration6">
+					<div class="desc__group desc__group_big">
+						<div class="desc__title">Используем надежные материалы</div>
+						<div class="desc__content">Мы используем итальянскую дизайнерскую бумагу Fabriano и Burano —
+							благодаря этому фигуры получаются крепкими и могут быть использованы в качестве декоративных
+							элементов вашего интерьера.
+						</div>
+					</div>
+				</div>
+				<div
+					class="cursor cursor_big revealator-slidedown revealator-once revealator-delay1 revealator-duration6"></div>
+				<img class="section9__img revealator-slidedown revealator-once revealator-delay2 revealator-duration6"
+					 src="img/section9__img2.jpg" alt="sec">
+			</div>
+			<div class="title-triple section9__title">
+				<div class="separator_vert"></div>
+				<div class="title-triple__item title-triple__item_long">Посмотрите поближе на головы Loft Box</div>
+			</div>
+			<div class="section9__slider">
+				<div class="slider">
+					<div class="fotorama" data-width="100%" data-ratio="1110/612"
+						 data-fit="cover" data-arrows="always" data-click="false" data-swipe="true">
+						<div class="slide">
+							<img class="slide__img" src="img/slide1.jpg" alt="slide">
+						</div>
+						<div class="slide">
+							<img class="slide__img" src="img/slide2.jpg" alt="slide">
+						</div>
+						<div class="slide">
+							<img class="slide__img" src="img/slide3.jpg" alt="slide">
+						</div>
+						<div class="slide">
+							<img class="slide__img" src="img/slide4.jpg" alt="slide">
+						</div>
+						<div class="slide">
+							<img class="slide__img" src="img/slide5.jpg" alt="slide">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- скрытые блоки	<section id="nav8" class="section10">
+		<div class="content">
+			<h2 class="h2 h2_white">Что говорят те, кто уже приобрел наборы Loft Box</h2>
+			<div class="slider slider-review-desktop">
+				<div class="fotorama" data-width="100%" data-ratio="1110/350"
+					 data-fit="cover" data-arrows="always" data-click="false" data-swipe="true">
+					<div
+						class="slide review-group revealator-fade revealator-delay1 revealator-once revealator-duration5">
+						<div class="review">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Эта прелесть уже есть у меня))) спасибо, что сообщили о завозе новинок!!! В тубусе 5
+								больших листов плотного картона, клей, линейка и нож. Так же инструкция. Я в
+								предвкушении)
+							</div>
+							<a href="http://vk.com/wall-73954924_54173" target="_blank">
+								<div class="review__person">
+									<img class="review__ava" src="img/ava1.png">
+									<div class="review__name-group">
+										<div class="review__name">Светлана Пожидаева</div>
+										<div class="review__link">vk.com/wall-73954924_54173</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="review revealator-fade revealator-delay2 revealator-once revealator-duration5">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Внезапно, тщательные исследования конкурентов призывают нас к новым свершениям, которые,
+								в свою очередь, должны быть ассоциативно распределены по отраслям.
+							</div>
+							<a href="http://vk.com/krasnotolik" target="_blank">
+								<div class="review__person">
+									<img class="review__ava" src="img/ava2.png">
+									<div class="review__name-group">
+										<div class="review__name">Анатолий Краснов</div>
+										<div class="review__link">vk.com/krasnotolik</div>
+									</div>
+
+								</div>
+							</a>
+						</div>
+						<div class="review revealator-fade revealator-delay3 revealator-once revealator-duration5">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Синтетическое тестирование однозначно определяет каждого участника как способного
+								принимать собственные решения касаемо выполнения необходимых задач.
+							</div>
+							<a href="http://vk.com/sinitsali" target="_blank">
+								<div class="review__person">
+									<img class="review__ava" src="img/ava3.png">
+									<div class="review__name-group">
+										<div class="review__name">Лилия Синицкая</div>
+										<div class="review__link">vk.com/sinitsali</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="slide review-group">
+						<div class="review">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Эта прелесть уже есть у меня))) спасибо, что сообщили о завозе новинок!!! В тубусе 5
+								больших листов плотного картона, клей, линейка и нож. Так же инструкция. Я в
+								предвкушении)
+							</div>
+							<a href="http://vk.com/wall-73954924_54173" target="_blank">
+								<div class="review__person">
+									<img class="review__ava" src="img/ava1.png">
+									<div class="review__name-group">
+										<div class="review__name">Светлана Пожидаева</div>
+										<div class="review__link">vk.com/wall-73954924_54173</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="review">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Внезапно, тщательные исследования конкурентов призывают нас к новым свершениям, которые,
+								в свою очередь, должны быть ассоциативно распределены по отраслям.
+							</div>
+							<a href="http://vk.com/krasnotolik" target="_blank">
+								<div class="review__person">
+									<img class="review__ava" src="img/ava2.png">
+									<div class="review__name-group">
+										<div class="review__name">Анатолий Краснов</div>
+										<div class="review__link">vk.com/krasnotolik</div>
+									</div>
+
+								</div>
+							</a>
+						</div>
+						<div class="review">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Синтетическое тестирование однозначно определяет каждого участника как способного
+								принимать собственные решения касаемо выполнения необходимых задач.
+							</div>
+							<a href="http://vk.com/sinitsali" target="_blank">
+								<div class="review__person">
+									<img class="review__ava" src="img/ava3.png">
+									<div class="review__name-group">
+										<div class="review__name">Лилия Синицкая</div>
+										<div class="review__link">vk.com/sinitsali</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="slide review-group">
+						<div class="review">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Эта прелесть уже есть у меня))) спасибо, что сообщили о завозе новинок!!! В тубусе 5
+								больших листов плотного картона, клей, линейка и нож. Так же инструкция. Я в
+								предвкушении)
+							</div>
+							<a href="http://vk.com/wall-73954924_54173" target="_blank">
+								<div class="review__person">
+									<img class="review__ava" src="img/ava1.png">
+									<div class="review__name-group">
+										<div class="review__name">Светлана Пожидаева</div>
+										<div class="review__link">vk.com/wall-73954924_54173</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="review">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Внезапно, тщательные исследования конкурентов призывают нас к новым свершениям, которые,
+								в свою очередь, должны быть ассоциативно распределены по отраслям.
+							</div>
+							<a href="http://vk.com/krasnotolik" target="_blank">
+								<div class="review__person">
+									<img class="review__ava" src="img/ava2.png">
+									<div class="review__name-group">
+										<div class="review__name">Анатолий Краснов</div>
+										<div class="review__link">vk.com/krasnotolik</div>
+									</div>
+
+								</div>
+							</a>
+						</div>
+						<div class="review">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Синтетическое тестирование однозначно определяет каждого участника как способного
+								принимать собственные решения касаемо выполнения необходимых задач.
+							</div>
+							<a href="http://vk.com/sinitsali" target="_blank">
+								<div class="review__person">
+									<img class="review__ava" src="img/ava3.png">
+									<div class="review__name-group">
+										<div class="review__name">Лилия Синицкая</div>
+										<div class="review__link">vk.com/sinitsali</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider slider-review-mob">
+				<div class="fotorama" data-width="420" data-height="280"
+					 data-fit="cover" data-arrows="false" data-click="false" data-swipe="true">
+					<div class="slide">
+						<div class="review">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Эта прелесть уже есть у меня))) спасибо, что сообщили о завозе новинок!!! В тубусе 5
+								больших листов плотного картона, клей, линейка и нож. Так же инструкция. Я в
+								предвкушении)
+							</div>
+							<div class="review__person">
+								<img class="review__ava" src="img/ava1.png">
+								<div class="review__name-group">
+									<div class="review__name">Светлана Пожидаева</div>
+									<div class="review__link">vk.com/wall-73954924_54173</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="review">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Внезапно, тщательные исследования конкурентов призывают нас к новым свершениям, которые,
+								в свою очередь, должны быть ассоциативно распределены по отраслям.
+							</div>
+							<div class="review__person">
+								<img class="review__ava" src="img/ava2.png">
+								<div class="review__name-group">
+									<div class="review__name">Анатолий Краснов</div>
+									<div class="review__link">vk.com/krasnotolik</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="review">
+							<img src="img/q.png" alt="q">
+							<div class="review__text">
+								Синтетическое тестирование однозначно определяет каждого участника как способного
+								принимать собственные решения касаемо выполнения необходимых задач.
+							</div>
+							<div class="review__person">
+								<img class="review__ava" src="img/ava3.png">
+								<div class="review__name-group">
+									<div class="review__name">Лилия Синицкая</div>
+									<div class="review__link">vk.com/sinitsali</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>-->
+
+	<section class="section11">
+		<div class="content">
+			<!--<div class="title-triple">
+				<div class="separator_vert"></div>
+				<div class="title-triple__item title-triple__item_unlim">Наши наборы<br>
+					в крупных торговых сетях
+				</div>
+			</div>
+			<div class="slider slider-supermarket-desktop">
+				<div class="fotorama" data-width="100%" data-height="340px"
+					 data-fit="cover" data-arrows="always" data-click="false" data-swipe="true">
+					<div class="slide review-group">
+						<div
+							class="review review-group revealator-fade revealator-delay3 revealator-once revealator-duration5">
+							<img class="max-w100p" src="img/section11__slider-img1.jpg" alt="q">
+						</div>
+						<div
+							class="review review-group revealator-fade revealator-delay2 revealator-once revealator-duration5">
+							<img class="max-w100p" src="img/section11__slider-img2.jpg" alt="q">
+						</div>
+						<div
+							class="review review-group revealator-fade revealator-delay1 revealator-once revealator-duration5">
+							<img class="max-w100p" src="img/section11__slider-img3.jpg" alt="q">
+						</div>
+					</div>
+					<div class="slide review-group">
+						<div class="review">
+							<img class="max-w100p" src="img/section11__slider-img1.jpg" alt="q">
+						</div>
+						<div class="review">
+							<img class="max-w100p" src="img/section11__slider-img2.jpg" alt="q">
+						</div>
+						<div class="review">
+							<img class="max-w100p" src="img/section11__slider-img3.jpg" alt="q">
+						</div>
+					</div>
+					<div class="slide review-group">
+						<div class="review">
+							<img class="max-w100p" src="img/section11__slider-img1.jpg" alt="q">
+						</div>
+						<div class="review">
+							<img class="max-w100p" src="img/section11__slider-img2.jpg" alt="q">
+						</div>
+						<div class="review">
+							<img class="max-w100p" src="img/section11__slider-img3.jpg" alt="q">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider slider-supermarket-mob">
+				<div class="fotorama" data-width="100%" data-height="340px"
+					 data-fit="cover" data-arrows="always" data-click="false" data-swipe="true">
+					<div class="slide review-group">
+						<div class="review">
+							<img class="max-w100p" src="img/section11__slider-img1.jpg" alt="q">
+						</div>
+					</div>
+					<div class="slide review-group">
+						<div class="review">
+							<img class="max-w100p" src="img/section11__slider-img2.jpg" alt="q">
+						</div>
+					</div>
+					<div class="slide review-group">
+						<div class="review">
+							<img class="max-w100p" src="img/section11__slider-img3.jpg" alt="q">
+						</div>
+					</div>
+				</div>
+			</div>-->
+			<h2 id="nav9" class="h2">Гарантии и доставка<br>
+				голов Loft box</h2>
+			<div class="garant">
+				<div class="garant__item">
+					<img src="img/garant1.png" alt="garant">
+					<div class="garant__title">Ваши гарантии</div>
+					<div class="garant__text">Мы гарантируем доставку декоративных голов животных в целостности без
+						повреждений.
+					</div>
+				</div>
+				<div class="garant__item">
+					<img src="img/garant2.png" alt="garant">
+					<div class="garant__title">Доставка</div>
+					<div class="garant__text">Мы доставим головы Loft Box в любую точку России транспортными компаниями
+						СДЭК, Деловые Линии, ПЭК, Почта России.
+					</div>
+				</div>
+			</div>
+			<div class="title-triple pay__title">
+				<div class="separator_vert"></div>
+				<div
+					class="title-triple__item title-triple__item_unlim revealator-slidedown revealator-once revealator-delay1 revealator-duration6">
+					как оплатить и получить<br>
+					набор Loft Box
+				</div>
+			</div>
+			<div class="section9__row">
+				<img class="section9__img revealator-slidedown revealator-once revealator-delay2 revealator-duration6"
+					 src="img/pay1.jpg" alt="sec">
+				<div
+					class="cursor cursor_big revealator-slidedown revealator-once revealator-delay3 revealator-duration6"></div>
+				<div class="desc revealator-slidedown revealator-once revealator-delay4 revealator-duration6">
+					<div class="desc__group desc__group_big">
+						<div class="desc__title">Оплата</div>
+						<div class="desc__content">
+							Возможно два варианта оплаты:<br>
+							Наличными при получении<br>
+							Картой Visa и MasterCard на сайте<br>
+							Вы сами выбираете удобный для вас вариант. Оплата картами происходит после оформления заказа
+							через платежный шлюз Яндекс Деньги.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section9__row">
+				<div
+					class="desc desc_right revealator-slidedown revealator-once revealator-delay1 revealator-duration6">
+					<div class="desc__group desc__group_big">
+						<div class="desc__title">Доставка</div>
+						<div class="desc__content">
+							Все наши заказы мы доставляем до двери по всей территроии России. Срок доставки не более 5
+							дней.<br>
+							Мы пользуемся услугами проверенных транспортных компаний, это позволяет держать низкие цены
+							и соблюдать оговоренные сроки.<br>
+							Курьеры транспортной компании звонят утром, в день доставки, и уточняют точное время и
+							адрес.<br>
+							Большая часть посылок доставляется в рабочее время, поэтому желательно указывать адрес где
+							вы будете в будние дни с 10:00 до 18:00.
+						</div>
+					</div>
+				</div>
+				<div
+					class="cursor cursor_big revealator-slidedown revealator-once revealator-delay2 revealator-duration6"></div>
+				<img class="section9__img revealator-slidedown revealator-once revealator-delay3 revealator-duration6"
+					 src="img/pay2.jpg" alt="sec">
+			</div>
+			<h2 id="nav10" class="h2 opt-title">Хотите заказать декоративные головы
+				Loft Box оптом?</h2>
+			<div class="gift gift2">
+				<img class="gift__img" src="img/guft-22.jpg" alt="gift">
+				<div class="gift__group">
+					<div class="gift__title">нужно большое количество фигур</div>
+					<div class="gift__desc">
+						Вы можете заказать у нас от 100 до 10 000 фигур из бумаги — наши мощности позволяют произвести и
+						поставить вам такое количество в срок 3-5 дней. Кроме того, при оптовом заказе вы получите
+						большую скидку.
+						<br>Если вам нужны другие фигуры из бумаги под заказ (похожие на головы других животных или
+						другие арт-объекты), наши проектировщики подготовят новые модели по вашим требованиям.
+					</div>
+				</div>
+			</div>
+
+			<div class="about about_yellow">
+				Чтобы узнать условия сотрудничества, свяжитесь с нами любым удобным для Вас способом.
+			</div>
+
+			<div class="center last-block">
+				<div class="callback js-make-call-details">Подробнее</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="nav11" class="section12">
+		<div class="content">
+			<h2 class="h2 h2_yellow">Где нас найти и как<br>связаться</h2>
+			<div class="section9__row">
+				<iframe class="maps-desc" src="https://yandex.by/map-widget/v1/-/CBUXNBaa3A" width="480" height="480"
+						frameborder="0"></iframe>
+				<iframe class="maps-mob" src="https://yandex.by/map-widget/v1/-/CBUXNBaa3A" width="100%" height="480"
+						frameborder="0"></iframe>
+				<div class="cursor cursor_big"></div>
+				<div class="desc">
+					<div class="desc__group desc__group_big">
+						<div class="desc__title">Адрес:</div>
+						<div class="desc__content">
+							Москва, м. Таганская ул. А. Солженицына, 23а, стр.1<br>
+							Работаем в пн-пт с 10.00 до 20.00
+						</div>
+						<div class="desc__title">Контакты:</div>
+						<div class="desc__content">
+							+7-495-514-89-38
+							<span class="num-middle">+7-967-101-35-75</span>
+							+7-966-144-33-93
+							<div class="email">Email: info@kraskiholy.ru</div>
+							<!--<div class="soc">
+								<a href="#" target="_blank">
+									<div class="soc__item soc__item1"></div>
+								</a>
+								<!--<a href="#" target="_blank">-->
+								<!--<div class="soc__item soc__item2"></div>-->
+								<!--</a>-->
+								<!--<a href="#" target="_blank">
+									<div class="soc__item soc__item3"></div>
+								</a>
+								<a href="#" target="_blank">
+									<div class="soc__item soc__item4"></div>
+								</a>
+							</div> -->
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+<script src="js/fotorama.js"></script>
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="js/fm.revealator.jquery.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

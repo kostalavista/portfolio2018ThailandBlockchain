@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=cyrillic');
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+h1 {
+	font-weight: 600;
+	text-align: center;
+	color: #202020;
+}
+h2 {
+	font-size: 22px;
+}
+a {
+	text-decoration: underline;
+	color: #202020;
+}
+footer {
+	text-align: center;
+	padding: 20px 0;
+}

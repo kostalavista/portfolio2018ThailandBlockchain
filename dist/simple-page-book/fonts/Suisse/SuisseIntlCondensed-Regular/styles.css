@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'SuisseIntlCond-Regular';
+  src: url('SuisseIntlCond-Regular.eot?#iefix') format('embedded-opentype'),  url('SuisseIntlCond-Regular.otf')  format('opentype'),
+	     url('SuisseIntlCond-Regular.woff') format('woff'), url('SuisseIntlCond-Regular.ttf')  format('truetype'), url('SuisseIntlCond-Regular.svg#SuisseIntlCond-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

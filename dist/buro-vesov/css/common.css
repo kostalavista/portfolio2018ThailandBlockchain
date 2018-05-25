@@ -1,0 +1,168 @@
+img {
+	border-radius: 3px;
+}
+li {
+	list-style: none;
+	font-size: 18px;
+}
+li:not(.list-spec__item):before {
+	content:"·";
+	font-size:30px;
+	padding-right: 7px;
+	vertical-align:middle;
+	line-height:18px;
+}
+label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 35px;
+	font: 16px "MullerUltraLight", sans-serif;
+}
+input[type=radio] {
+	display: none;
+}
+input[type=checkbox] {
+	display: none;
+}
+input[type=radio] + label:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 16px;
+	height: 16px;
+	background-color: #fff;
+	border: 1px solid #b9b9b9;
+	border-radius: 10px;
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+}
+input[type=checkbox] + label:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 16px;
+	height: 16px;
+	background-color: #fff;
+	border: 1px solid #b9b9b9;
+}
+input[type=radio]:checked + label:before {
+	content: "●";
+	color: #ffb400;
+	text-align: center;
+	font-size: 20px;
+	position: absolute;
+	line-height: 16px;
+}
+input[type=checkbox]:checked + label:before {
+	content: "\2713";
+	font-size: 20px;
+	color: #ffb400;
+	text-align: center;
+	line-height: 15px;
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+}
+button[disabled], html input[disabled] {
+	background-color: #fff;
+}
+.g-wrap {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1920px;
+}
+.g-wrap-content {
+	position: relative;
+	max-width: 1150px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.g-center {
+	text-align: center;
+}
+.g-rotate-180 {
+	-ms-transform: rotate(-180deg);
+	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+.g-width-50p {
+	width: 50%;
+}
+.g-display-none {
+	display: none;
+}
+.g-display-flex {
+	display: flex;
+}
+.g-space-between {
+	justify-content: space-between;
+}
+.g-padding-top_50 {
+	padding-top: 50px;
+}
+.g-margin-top_80 {
+	margin-top: 80px;
+}
+.g-margin-bottom_0 {
+	margin-bottom: 0;
+}
+.g-z-index-1 {
+	z-index: 1;
+}
+.g-z-index-11 {
+	z-index: 11;
+}
+.g-grow-1 {
+	flex-grow: 1;
+	flex-basis: 100px;
+}
+.g-grow-2 {
+	flex-grow: 2;
+}
+.g-w100p {
+	width: 100%;
+}
+.g-padding-top-0 {
+	padding-top: 0;
+}
+.g-padding-top-20 {
+	padding-top: 20px;
+}
+.g-padding-0 {
+	padding: 0;
+}
+.g-white {
+	color: #fff;
+}
+.g-bold {
+	font-family: "MullerBold", sans-serif;
+}
+.g-color_black {
+	color: #000000;
+}
+.g-flex-start {
+	align-items: flex-start;
+}
+.g-fz-16 {
+	font-size: 16px;
+}
+.g-margin-right-50 {
+	margin-right: 50px;
+}
+.g-line-through {
+	text-decoration: line-through;
+}
+.lb-nav a.lb-next{
+	opacity: 1;
+}
+.lb-nav a.lb-next {
+	opacity: 1;
+}

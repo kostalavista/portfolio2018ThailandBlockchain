@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'SuisseIntlMono-Thin';
+  src: url('SuisseIntlMono-Thin.eot?#iefix') format('embedded-opentype'),  url('SuisseIntlMono-Thin.otf')  format('opentype'),
+	     url('SuisseIntlMono-Thin.woff') format('woff'), url('SuisseIntlMono-Thin.ttf')  format('truetype'), url('SuisseIntlMono-Thin.svg#SuisseIntlMono-Thin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

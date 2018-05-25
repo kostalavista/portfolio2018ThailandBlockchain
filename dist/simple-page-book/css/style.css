@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import url(../fonts/Caslon_224/Caslon224Std-BlackItalic/styles.css);
+@import url(../fonts/Caslon_224/Caslon224Std-MediumItalic/styles.css);
+@import url(../fonts/Caslon_224/Caslon224Std-BookItalic/styles.css);
+@import url(../fonts/Caslon_224/Caslon224Std-Black/styles.css);
+@import url(../fonts/Caslon_224/Caslon224Std-Bold/styles.css);
+@import url(../fonts/Suisse/SuisseIntlCondensed-Medium/styles.css);
+@import url(../fonts/Suisse/SuisseIntlCondensed-Regular/styles.css);
+@import url(../fonts/Suisse/SuisseIntlCondensed-Light/styles.css);
+@import url(../fonts/Adobe_Caslon/styles.css);
+html, body { height: 100%; min-width: 320px; }
+
+body, ul, p { padding: 0; margin: 0; }
+
+.helper { display: inline-block; vertical-align: middle; height: 100%; width: 0; }
+
+.wrap-text-box { display: inline-block; vertical-align: middle; }
+
+.header-bg { width: 100%; height: 100%; position: absolute; z-index: 1; overflow: hidden; }
+
+.bg-blur { background-color: #000000; opacity: 0.3; width: 100%; }
+
+header { background-color: #000; min-height: 800px; height: 100%; width: 100%; }
+header .wrap-header { padding: 150px 10px; position: relative; z-index: 2; height: calc(100% - 300px); max-width: 1320px; margin: 0 auto; }
+header .wrap-header .book-cover { float: left; width: 40%; height: 100%; text-align: center; }
+header .wrap-header .book-cover img { max-height: 100%; max-width: 90%; display: inline-block; vertical-align: middle; }
+header .wrap-header .book-desc { width: 60%; margin-left: 40%; height: 100%; color: #ffffff; text-align: center; position: relative; }
+header .wrap-header .book-desc .title { font-size: 80px; letter-spacing: 2px; line-height: 80px; font-family: "Caslon224Std-BlackItalic"; margin-bottom: 33px; }
+header .wrap-header .book-desc .subtitle { font-size: 48px; letter-spacing: 1.2px; line-height: 60px; font-family: "Caslon224Std-MediumItalic"; margin-bottom: 66px; }
+header .wrap-header .book-desc .author { font-size: 30px; letter-spacing: 0.75px; line-height: 30px; font-family: "Caslon224Std-BookItalic"; margin-bottom: 33px; }
+header .wrap-header .book-desc .button-box { position: absolute; bottom: 0px; }
+header .wrap-header .book-desc .button-box li { font-size: 22px; letter-spacing: 1.1px; line-height: inherit; font-family: "SuisseIntlCond-Medium"; margin-bottom: inherit; list-style: none; display: inline-block; border-radius: 45px; border: 2px solid #ffffff; opacity: 0.45; vertical-align: middle; padding: 12px 25px; margin: 33px 16.5px 0; min-width: 150px; }
+header .wrap-header .book-desc .button-box li:first-child { border: none; }
+header .wrap-header .book-desc .button-box li:hover:not(:first-child):not(.not-life) { opacity: 1; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; background-color: #ffffff; }
+header .wrap-header .book-desc .button-box li:hover:not(.not-life) a { background-position: -5px -5px; -webkit-transition-delay: 0.1s; transition-delay: 0.1s; }
+header .wrap-header .book-desc .button-box li .amazon { width: 140px; height: 40px; background-image: url("../img/retailers/amazon.png"); background-position: -5px -55px; display: block; margin: 0 auto; }
+header .wrap-header .book-desc .button-box li .ibooks { width: 140px; height: 40px; background-image: url("../img/retailers/ibooks.png"); background-position: -5px -55px; display: block; margin: 0 auto; }
+header .wrap-header .book-desc .button-box li .BN { width: 140px; height: 40px; background-image: url("../img/retailers/BN.png"); background-position: -5px -55px; display: block; margin: 0 auto; }
+header .wrap-header .book-desc .button-box li .google { width: 140px; height: 40px; background-image: url("../img/retailers/google.png"); background-position: -5px -55px; display: block; margin: 0 auto; }
+header .wrap-header .book-desc .button-box li .kobo { width: 140px; height: 40px; background-image: url("../img/retailers/kobo.png"); background-position: -5px -55px; display: block; margin: 0 auto; }
+header .wrap-header .book-desc .button-box li.not-life { opacity: 0.2; pointer-events: none; position: relative; }
+header .wrap-header .book-desc .button-box li.not-life:after { content: "COMING SOON"; position: absolute; bottom: -25px; left: 58px; font-size: 12px; letter-spacing: 1.5px; line-height: inherit; font-family: "SuisseIntlCond-Light"; margin-bottom: 0; }
+
+section { margin-bottom: 150px; }
+
+.content { max-width: 780px; margin: 0 auto; color: #000000; padding: 0 15px; }
+.content .description { margin-top: 150px; }
+.content .description p { font-size: 24px; letter-spacing: 0.24px; line-height: 36px; font-family: "ACaslonPro-Regular"; margin-bottom: 0; }
+.content .description p:first-child { font-weight: bold; margin-bottom: 66px !important; font-size: 30px; letter-spacing: normal; line-height: inherit; font-family: "Caslon224Std-BookItalic"; margin-bottom: 0; }
+.content .section-title { font-size: 17px; letter-spacing: 1.27px; line-height: inherit; font-family: "SuisseIntlCond-Medium"; margin-bottom: 0; color: #FCDB00; text-align: center; }
+.content .mini-hr { width: 50px; height: 1px; border: none; background-color: #FCDB00; margin: 33px auto 0; }
+.content .sharing { text-align: center; }
+.content .sharing li { list-style-type: none; display: inline-block; font-size: 17px; border-radius: 45px; padding: 25px 30px; letter-spacing: 1.27px; text-transform: uppercase; font-family: "SuisseIntlCond-Regular"; margin: 33px 10px 0 10px; color: #ffffff; cursor: pointer; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.content .sharing li .icon { background-image: url("../img/icons/icon-sharing.png"); background-repeat: no-repeat; display: inline-block; margin: 0 0 -2px 10px; }
+.content .sharing li.facebook { background-color: #3b5998; border: 2px solid #3b5998; }
+.content .sharing li.facebook .icon { width: 10px; height: 19px; background-position: -39px -34px; -webkit-transition-delay: 0.1s; transition-delay: 0.1s; }
+.content .sharing li.facebook:hover { background-color: #ffffff; color: #3b5998; }
+.content .sharing li.facebook:hover .icon { background-position: -39px -5px; }
+.content .sharing li.twitter { background-color: #00aced; border: 2px solid #00aced; }
+.content .sharing li.twitter .icon { width: 17px; height: 14px; background-position: -59px -29px; -webkit-transition-delay: 0.1s; transition-delay: 0.1s; }
+.content .sharing li.twitter:hover { background-color: #ffffff; color: #00aced; }
+.content .sharing li.twitter:hover .icon { background-position: -59px -5px; }
+.content .sharing li.email { background-color: #26ca96; border: 2px solid #26ca96; }
+.content .sharing li.email .icon { width: 24px; height: 17px; background-position: -5px -32px; -webkit-transition-delay: 0.1s; transition-delay: 0.1s; }
+.content .sharing li.email:hover { background-color: #ffffff; color: #26ca96; }
+.content .sharing li.email:hover .icon { background-position: -5px -5px; }
+.content .author-about { font-size: 17px; letter-spacing: 1.27px; line-height: inherit; font-family: "SuisseIntlCond-Regular"; margin-bottom: 300px; color: #0c6ffb; text-transform: uppercase; text-align: center; }
+.content .author-about .name { font-size: 30px; letter-spacing: 0.75px; line-height: 30px; font-family: "Caslon224Std-BookItalic"; margin-bottom: 0; color: #000000; margin-top: 33px; text-transform: none; }
+.content .author-about .get-info { padding: 30px 0; border-radius: 45px; border: 2px solid #0c6ffb; display: inline-block; margin: 15px auto 10px; max-width: 420px; width: 100%; cursor: pointer; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.content .author-about .get-info:hover { background-color: #0c6ffb; color: #ffffff; }
+.content .author-about li { display: inline-block; list-style-type: none; }
+.content .author-about li:not(:last-child):after { content: "•"; margin: 0 15px; color: #aed7ff; font-size: 22px; }
+.content .author-about li a { color: #0c6ffb; text-decoration: none; }
+.content .author-about li a:hover { border-bottom: 2px solid #0c6ffb; }
+
+footer { font-size: 20.85px; letter-spacing: 0.83px; line-height: 22.52px; font-family: "Caslon224Std-Bold"; margin-bottom: 100px; color: #26161C; text-align: center; }
+footer a { color: #000000; text-decoration: none; }
+footer .logo { font-size: 30px; letter-spacing: -1px; line-height: inherit; font-family: "Caslon224Std-Black"; margin-bottom: 0; }
+footer .para { vertical-align: super; color: #0c6ffb; }
+footer img { margin-left: 12px; }
+
+@media screen and (max-width: 950px) { header .wrap-header .book-desc .button-box li { padding: 7px 18px; margin: 23px 7px 0; } }
+@media screen and (max-width: 720px) { header { height: auto; }
+  header .wrap-header { padding: 20px 0; height: auto; }
+  header .wrap-header .book-cover { float: none; width: 100%; }
+  header .wrap-header .book-desc { width: 100%; margin-left: 0; padding: 33px 0; }
+  header .wrap-header .book-desc .button-box { position: relative; } }
+@media screen and (max-width: 385px) { .author-about li { font-size: 14px; }
+  footer { font-size: 16px; }
+  footer .logo { font-size: 26px; }
+  .content .description { margin-top: 66px; } }
+
+/*# sourceMappingURL=style.css.map */

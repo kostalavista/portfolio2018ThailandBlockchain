@@ -1,0 +1,511 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Бюро Весов</title>
+	<meta name="Keywords" content="Бюро Весов">
+	<meta name="Description" content="Бюро Весов">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
+
+	<link rel="stylesheet" href="css/jquery-ui.css" media="all">
+	<link rel="stylesheet" href="css/lightbox.css" media="all">
+	<link rel="stylesheet" href="css/main.css" media="all">
+	<link rel="stylesheet" href="css/responsive.css" media="all">
+
+	<style>
+		.side-nav {
+			display: none;
+		}
+	</style>
+
+	<!--[if lte IE 8]>
+		<script src="js/ie/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="header-group"></div>
+
+<div class="g-wrap-content">
+	<div class="content-group">
+		<div class="content-item">
+			<div class="breadcrumbs">
+				<a href="#"><span class="breadcrumbs__item">Каталог</span></a>
+				/
+				<a href="#"><span class="breadcrumbs__item">Автомобильные</span></a>
+			</div>
+			<h1>Весы подкладные поосные, потележечные <span class="hint-label"><span class="hint-label__arrow"></span>33 варианта</span></h1>
+			<p>Контролируйте осевые нагрузки и общую массу автомобиля с точностью ±10 кг. От 114 000 руб.</p>
+			<article class="article auto-article">
+				<div>
+					<a class="article__img article__img_auto"
+						href="img/pages/auto/product-1.jpg"
+						data-lightbox="auto-product-1"
+						data-title="Весы подкладные поосные, потележечные">
+							<img class="g-w100p" src="img/pages/auto/product-1.jpg" alt=""/>
+					</a>
+					<a class="article__img article__img_auto"
+					   href="img/pages/auto/product-2.jpg"
+					   data-lightbox="auto-product-1"
+					   data-title="Весы подкладные поосные, потележечные">
+						<img class="g-w100p" src="img/pages/auto/product-2.jpg" alt=""/>
+					</a>
+				</div>
+				<div class="article__info article__info_auto">
+					<div class="article__text article__text_long">
+						<p><b>Идеально, если:</b></p>
+						<ul class="list-point">
+							<li>Вы желаете избежать штрафов от 150 до 500 т.р. за перегруз по осям,</li>
+							<li>Или Вам нужны весы "на один сезон", например, взвесить 3000 тонн груза,</li>
+							<li>Или у Вас до 5 взвешиваний в неделю.</li>
+						</ul>
+						<p><b>Подходящие автомобили:</b></p>
+						<ul class="list-point">
+							<li>С нагрузкой до 30 т на ось,</li>
+							<li>Для одной, двух или трех осей одновременно.</li>
+						</ul>
+						<p><b>Особенности весов:</b></p>
+						<ul class="list-point">
+							<li>Установка даже на землю,</li>
+							<li>Функция динамического взвешивания.</li>
+						</ul>
+					</div>
+					<div class="article__more more-auto">
+						<div class="btn-callback js-popup-callback btn-callback_orange more-auto__btn1">Получить консультацию</div>
+					</div>
+				</div>
+			</article>
+		</div>
+
+
+
+		<div class="filter-group">
+			<div class="filter">
+				<div class="filter-toggle">
+					<div class="filter__header-group js-toggle-filter-action">
+						<div class="filter__header">Фильтры</div>
+						<img class="filter__header-logo" src="img/filter.png" alt="filter">
+					</div>
+				</div>
+				<form class="js-toggle-filter filter__toggled" action="#">
+					<div class="filter__content">
+						<div class="filter-hint filter-hint_absolute">
+							<div class="filter-hint__arrow"></div>
+							<div class="filter-hint__text">Выбранно моделей: 6</div>
+							<div class="filter-hint__action">Показать</div>
+						</div>
+						<div class="filter__clear js-filter-clear"><span class="link_gray">Очистить</span></div>
+						<div class="filter__item">
+							<div class="filter__title">Цена</div>
+							<div class="js-filter-slider filter-slider"></div>
+							<div class="filter-slider__input-group">
+								<input class="filter-slider__input" type="text" id="minCost" value="10000р" disabled/>
+								<div class="filter-slider__decorate"></div>
+								<input class="filter-slider__input" type="text" id="maxCost" value="90000р" disabled/>
+							</div>
+						</div>
+						<div class="filter__item">
+							<div class="filter__title">Максимальный вес (НПВ)</div>
+							<div class="filter__input-group">
+								<input id="weight1-1" type="radio" name="weight" value="5">
+								<label for="weight1-1">5 кг</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight1-2" type="radio" name="weight" value="20">
+								<label for="weight1-2">20 кг</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight1-3" type="radio" name="weight" value="50">
+								<label for="weight1-3">50 кг</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight1-4" type="radio" name="weight" value="100">
+								<label for="weight1-4">100 кг</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight1-5" type="radio" name="weight" value="500">
+								<label for="weight1-5">500 кг</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight1-6" type="radio" name="weight" value="1000">
+								<label for="weight1-6">1000 кг</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight1-7" type="radio" name="weight" value="5000">
+								<label for="weight1-7">5000 кг</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight1-8" type="radio" name="weight" value="10000">
+								<label for="weight1-8">10000 кг</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight1-9" type="radio" name="weight" value="20000">
+								<label for="weight1-9">20000 кг</label>
+							</div>
+						</div>
+						<div class="filter__item">
+							<div class="filter__title">Погрешность (%)</div>
+							<div class="filter__input-group">
+								<input id="weight2-1" type="radio" name="error" value="5">
+								<label for="weight2-1">до 5%</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight2-2" type="radio" name="error" value="4">
+								<label for="weight2-2">до 4%</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight2-3" type="radio" name="error" value="3">
+								<label for="weight2-3">до 3%</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight2-4" type="radio" name="error" value="2.5">
+								<label for="weight2-4">до 2.5%</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight2-5" type="radio" name="error" value="2">
+								<label for="weight2-5">до 2%</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight2-6" type="radio" name="error" value="1.5">
+								<label for="weight2-6">до 1.5%</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight2-7" type="radio" name="error" value="1">
+								<label for="weight2-7">до 1%</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight2-8" type="radio" name="error" value="0.5">
+								<label for="weight2-8">до 0.5%</label>
+							</div>
+						</div>
+						<div class="filter__item">
+							<div class="filter__title">Условия эксплуатации</div>
+							<div class="filter__input-group">
+								<input id="weight3-1" type="checkbox" name="exploitation" value="1">
+								<label for="weight3-1">Не агрессивная среда</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight3-2" type="checkbox" name="exploitation" value="2">
+								<label for="weight3-2">Повышенная влажность</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight3-3" type="checkbox" name="exploitation" value="3">
+								<label for="weight3-3">Повышенная запыленность</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight3-4" type="checkbox" name="exploitation" value="4">
+								<label for="weight3-4">Повышенная температура</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight3-5" type="checkbox" name="exploitation" value="5">
+								<label for="weight3-5">Вибрация</label>
+							</div>
+							<div class="filter__input-group">
+								<input id="weight3-6" type="checkbox" name="exploitation" value="6">
+								<label for="weight3-6">Электромагнитные поля</label>
+							</div>
+						</div>
+					</div>
+					<input class="btn" type="submit" value="Отфильтровать">
+				</form>
+			</div>
+
+			<div class="filter-rezult">
+				<div class="popular">
+					<div class="popular__title">Популярное в категории:</div>
+					<div class="popular__item"><span class="link_gray">c терминалом</span></div>
+					<div class="popular__item"><span class="link_gray">c дозированием</span></div>
+					<div class="popular__item"><span class="link_gray">cо стойкой</span></div>
+				</div>
+
+				<div class="filter-nav">
+					<div class="filter-nav__desc">
+						Сортировать по:
+					</div>
+					<nav class="filter-nav__nav">
+						<div class="filter-nav__item filter-nav__item_active">Размеру</div>
+						<div class="filter-nav__item">Нагрузке</div>
+						<div class="filter-nav__item">Производителю</div>
+						<div class="filter-nav__item">Цене</div>
+					</nav>
+				</div>
+
+				<div class="product">
+					<div class="mark product-info__mark">Хит продаж</div>
+					<div class="product-info">
+						<div class="product-img_filter"><a href="./product.html"><img class="product-img_filter-img" src="./img/product.png" alt="product"></a></div>
+						<div class="product-column product-column_middle-filter">
+							<div class="price">
+								<div class="price__text">Цена:</div>
+								<div class="price-old price-old_filter">1 232 323  руб.</div>
+								<div class="price-new price-new_filter">1 232 322  руб.</div>
+							</div>
+							<div class="btn-callback js-popup-callback product-callback product-callback_filter">Получить индивидуальную цену</div>
+						</div>
+						<div class="product-column">
+							<div class="product-name"><a href="./product.html">Название конкретной модели</a></div>
+							<div class="product-category">
+								<div class="product-category__text">Категория:</div>
+								<div class="product-category__link"><span class="link_gray">Весы подкладные поосные, потележечные</span></div>
+								<div class="product-description">
+									Нагрузка 5000 кг, цена деления 2 кг, платформа 1250х1250мм,
+									производитель В3ВТ, срок поставки 4 недели, доставка или сомовывоз из Волгограда.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product-more-info">
+						<div class="btn-callback js-popup-callback btn-callback_orange">Заказать</div>
+						<div class="product-more-info__compare product-more-info__compare_filter"><span class="link_gray">К сравнению</span></div>
+					</div>
+				</div>
+
+				<div class="product">
+					<div class="mark mark_green product-info__mark">Лучшая цена</div>
+					<div class="product-info">
+						<div class="product-img_filter"><a href="./product.html"><img class="product-img_filter-img" src="./img/product.png" alt="product"></a></div>
+						<div class="product-column product-column_middle-filter">
+							<div class="price">
+								<div class="price__text">Цена:</div>
+								<div class="price-old price-old_filter">1 232 323  руб.</div>
+								<div class="price-new price-new_filter">1 232 322  руб.</div>
+							</div>
+							<div class="btn-callback js-popup-callback product-callback product-callback_filter">Получить индивидуальную цену</div>
+						</div>
+						<div class="product-column">
+							<div class="product-name"><a href="./product.html">Название конкретной модели</a></div>
+							<div class="product-category">
+								<div class="product-category__text">Категория:</div>
+								<div class="product-category__link"><span class="link_gray">Весы подкладные поосные, потележечные</span></div>
+								<div class="product-description">
+									Нагрузка 5000 кг, цена деления 2 кг, платформа 1250х1250мм,
+									производитель В3ВТ, срок поставки 4 недели, доставка или сомовывоз из Волгограда.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product-more-info">
+						<div class="btn-callback js-popup-callback btn-callback_orange">Заказать</div>
+						<div class="product-more-info__compare product-more-info__compare_filter"><span class="link_gray">К сравнению</span></div>
+					</div>
+				</div>
+
+				<div class="product">
+					<div class="mark mark_blue product-info__mark">Надёжный товар</div>
+					<div class="product-info">
+						<div class="product-img_filter"><a href="./product.html"><img class="product-img_filter-img" src="./img/product.png" alt="product"></a></div>
+						<div class="product-column product-column_middle-filter">
+							<div class="price">
+								<div class="price__text">Цена:</div>
+								<div class="price-old price-old_filter">1 232 323  руб.</div>
+								<div class="price-new price-new_filter">1 232 322  руб.</div>
+							</div>
+							<div class="btn-callback js-popup-callback product-callback product-callback_filter">Получить индивидуальную цену</div>
+						</div>
+						<div class="product-column">
+							<div class="product-name"><a href="./product.html">Название конкретной модели</a></div>
+							<div class="product-category">
+								<div class="product-category__text">Категория:</div>
+								<div class="product-category__link"><span class="link_gray">Весы подкладные поосные, потележечные</span></div>
+								<div class="product-description">
+									Нагрузка 5000 кг, цена деления 2 кг, платформа 1250х1250мм,
+									производитель В3ВТ, срок поставки 4 недели, доставка или сомовывоз из Волгограда.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product-more-info">
+						<div class="btn-callback js-popup-callback btn-callback_orange">Заказать</div>
+						<div class="product-more-info__compare product-more-info__compare_filter"><span class="link_gray">К сравнению</span></div>
+					</div>
+				</div>
+
+				<div class="filter-more"><span class="link">Показать еще</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="full-bg-wrap">
+	<div class="overlay-bg overlay-bg_mask"></div>
+	<div class="g-wrap">
+		<div class="full-bg bg-category-1">
+			<div class="g-wrap-content">
+				<div class="about-us">
+					<div class="header-comment">
+						<div class="header-comment__title"><span class="g-light">О</span> нас</div>
+						<div class="decoration"></div>
+					</div>
+					<div class="about">
+						<div class="about__item">
+							<div class="about__img-wrap"><img class="about__img" src="img/icon-big/tag.png" alt="tag"></div>
+							<div class="about__info">
+								<div class="about__title">Честная цена</div>
+								<div class="about__text">Продаем по ценам заводов изготовителей</div>
+							</div>
+						</div>
+						<div class="about__item">
+							<div class="about__img-wrap"><img class="about__img" src="img/icon-big/packages.png" alt="tag"></div>
+							<div class="about__info">
+								<div class="about__title">Большой ассортимент</div>
+								<div class="about__text">В наличии более 780 моделей весов</div>
+							</div>
+						</div>
+						<div class="about__item">
+							<div class="about__img-wrap"><img class="about__img" src="img/icon-big/black-wrench.png" alt="tag"></div>
+							<div class="about__info">
+								<div class="about__title">Помощь на всех этапах</div>
+								<div class="about__text">Поможем выбрать, организуем доставку,
+									найдем ближайший сервис.</div>
+							</div>
+						</div>
+						<div class="about__item">
+							<div class="about__img-wrap"><img class="about__img" src="img/icon-big/certificationl.png" alt="tag"></div>
+							<div class="about__info">
+								<div class="about__title">Международная сертификация</div>
+								<div class="about__text">Гарантия на всю продукцию
+									3-5 лет</div>
+							</div>
+						</div>
+					</div>
+					<div class="watch-all"><a href="#"><span class="link_gray">Смотреть все</span></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="g-wrap-content">
+	<div class="content-group">
+		<div class="content-item">
+			<div class="content-title"><span class="g-light">Какие решения</span> мы предлагаем</div>
+			<div class="decision">
+				<div class="decision__item">
+					<div class="decision__wrap"><img class="decision__img" src="img/icon-big/decision-1.png" alt="des"></div>
+					<div class="decision__title">Недорогие весы для простого взвешивания</div>
+					<div class="decision__text">Недорого: у вас мало взвешиваний, либо недорогой товар, либо работа в идеальных условиях</div>
+				</div>
+				<div class="decision__item">
+					<div class="decision__wrap"><img class="decision__img" src="img/icon-big/decision-2.png" alt="des"></div>
+					<div class="decision__title">Весы с мгновенной поставкой</div>
+					<div class="decision__text">работа встала, весы нужны СРОЧНО!!!</div>
+				</div>
+				<div class="decision__item">
+					<div class="decision__wrap"><img class="decision__img" src="img/icon-big/decision-3.png" alt="des"></div>
+					<div class="decision__title">Весы с запасом прочности и надежности</div>
+					<div class="decision__text">высокая стоимость простоя в работе весов или работа в сложных условиях эксплуатации</div>
+				</div>
+				<div class="decision__item">
+					<div class="decision__wrap"><img class="decision__img" src="img/icon-big/decision-4.png" alt="des"></div>
+					<div class="decision__title">с простой интеграцией с ПК и 1 С</div>
+					<div class="decision__text">современный учет</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="full-bg-wrap">
+	<div class="overlay-bg"></div>
+	<div class="g-wrap">
+		<div class="full-bg">
+			<div class="g-wrap-content g-z-index-1">
+				<div class="content-title content-title_dark"><span class="g-light">Нужны</span> весы?</div>
+				<p class="g-white">Мы помогаем выбрать оптимальную модель весов исходя из Вашего бюджета, сроков поставки и способа
+					взвешивания. Знаем все модели от самых бюджетных до элитных. Оформите заявку и получите
+					несколько вариантов на выбор.</p>
+				<form class="form form_horiz">
+					<input class="input input_horiz" name="name" placeholder="Ваше имя">
+					<input class="input input_horiz" name="phone" placeholder="Ваш телефон">
+					<input type="submit" class="btn btn-request" value="Заказать звонок">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="g-wrap-content">
+	<div class="content-group">
+		<div class="content-item">
+			<div class="content-title">Полезные статьи для этого раздела</div>
+			<div class="article-group article-group_vertical">
+				<article class="article article_vertical">
+					<div><img class="article__img article__img_vertical" src="img/article-1.jpg" alt="article"></div>
+					<div class="article__info">
+						<div class="article__date">18.05.2016</div>
+						<div class="article__title">Определяем условия работы, технические требования</div>
+						<div class="article__text article__text_long">
+							С другой стороны постоянное информационно-пропагандистское обеспечение нашей
+							деятельности способствует подготовки и реализации систем массового участия.
+							Идейные соображения высшего порядка, а также реализация намеченных
+						</div>
+					</div>
+					<div class="article__more article__more_vertical">
+						<a href="#">
+							<span class="link">Подробнее</span>
+							<img src="img/icon/arrow-more.png" alt="more">
+						</a>
+					</div>
+				</article>
+				<article class="article article_vertical">
+					<div><img class="article__img article__img_vertical" src="img/article-2.jpg" alt="article"></div>
+					<div class="article__info">
+						<div class="article__date">18.05.2016</div>
+						<div class="article__title">На что нужно обратить внимание</div>
+						<div class="article__text article__text_long">
+							С другой стороны постоянное информационно-пропагандистское обеспечение нашей
+							деятельности способствует подготовки и реализации систем массового участия.
+							Идейные соображения высшего порядка, а также реализация намеченных
+						</div>
+					</div>
+					<div class="article__more article__more_vertical">
+						<a href="#">
+							<span class="link">Подробнее</span>
+							<img src="img/icon/arrow-more.png" alt="more">
+						</a>
+					</div>
+				</article>
+				<article class="article article_vertical">
+					<div><img class="article__img article__img_vertical" src="img/article-3.jpg" alt="article"></div>
+					<div class="article__info">
+						<div class="article__date">18.05.2016</div>
+						<div class="article__title">На что нужно обратить внимание</div>
+						<div class="article__text article__text_long">
+							С другой стороны постоянное информационно-пропагандистское обеспечение нашей
+							деятельности способствует подготовки и реализации систем массового участия.
+							Идейные соображения высшего порядка, а также реализация намеченных
+						</div>
+					</div>
+					<div class="article__more article__more_vertical">
+						<a href="#">
+							<span class="link">Подробнее</span>
+							<img src="img/icon/arrow-more.png" alt="more">
+						</a>
+					</div>
+				</article>
+			</div>
+		</div>
+		<div class="content-item">
+			<div class="info-block g-padding-top-0">
+				<img class="info-block__img" src="img/article.jpg" alt="article">
+				<div class="info-block__content">
+					<div class="info-block__title">С другой стороны укрепление и развитие</div>
+					<div class="info-block__text">Не следует, однако забывать, что консультация с широким активом в
+						значительной степени обуславливает создание форм развития. Разнообразный и богатый опыт
+						постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу
+						(специалистов) участие в формировании систем массового участия.
+						<br><br>
+						Идейные соображения высшего порядка, а также новая модель организационной
+						деятельности требуют определения</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer"></footer>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

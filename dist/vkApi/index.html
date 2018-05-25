@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>VK api</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="checkbox"><label><input type="checkbox" id="likes" checked> Likes </label></div>
+<div class="checkbox"><label><input type="checkbox" id="reposts" > Reposts </label></div>
+<div class="checkbox"><label><input type="checkbox" id="comments"> Comments </label></div>
+<div class="checkbox"><label><input type="checkbox" id="ismember" checked> Is member </label></div>
+
+<input id="url" class="form-control" type="text" value="http://vk.com/kitkat_belarus?w=wall-85893858_10639"
+       placeholder="Enter URL">
+<div class="subscr">Enter URL to post with "&w=" parameter<br>
+	Example: <span class="small">http://vk.com/kitkat_belarus?w=wall-85893858_10639</span></div>
+<button id="get" class="btn btn-default">Get</button>
+
+<div class="alert alert-danger">
+    <span></span>
+</div>
+
+
+<div id="results">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    var lineNumber = 0;
+    var isMember;
+    var resultArr = [];
+    var resultArrFilter1 = [];
+    var isMemberArr = [];
+
+    $(document).ready(function(){
+        $("#get").on('click', function () {
+            $(".alert").hide();
+
+            var comments = $("#comments").prop('checked');
+            var reposts = $("#reposts").prop('checked');
+            var likes = $("#likes").prop('checked');
+            isMember = $("#ismember").prop('checked');
+
+            if ( likes || reposts || comments ) {
+                $("#get").attr('id', 'disabled');
+                $("#disabled").html('<img src="img/loading.gif" class="loading">');
+                $("#results table tbody").empty();
+                lineNumber = 0;
+                resultArr = [];
+                resultArrFilter1 = [];
+                isMemberArr = [];
+
+
+                var link = $("#url").val();
+                var arr = getIdFromLink(link);
+                var gropeId = parseInt(arr[0]);
+                var postId = parseInt(arr[1]);
+
+                if (!link) {
+                    errorAlert('Enter URL.');
+                } else if (!isNumeric(gropeId) || !isNumeric(postId)) {
+                    errorAlert('Неправильно введён URL. Попробуйте ввести конструкцию вида wall-85893858_10639');
+                } else if (likes && reposts && comments) {
+                    getLikes(gropeId, postId, "likes", 0, "copies", "comments");
+                } else if (reposts && comments) {
+                    getLikes(gropeId, postId, "copies", 0, "comments", false);
+                } else if (likes && comments) {
+                    getLikes(gropeId, postId, "likes", 0, "comments", false);
+                } else if (likes && reposts) {
+                    getLikes(gropeId, postId, "likes", 0, "copies", false);
+                } else if (likes) {
+                    getLikes(gropeId, postId, "likes", 0, false, false);
+                } else if (reposts) {
+                    getLikes(gropeId, postId, "copies", 0, false, false);
+                } else if  (comments) {
+                    getLikes(gropeId, postId, "comments", 0, false, false);
+                }
+            } else if (isMember) {
+                errorAlert('Выберите ещё хотя бы один параметр, помимо isMember');
+            }
+        });
+    });
+    function errorAlert(text) {
+        $(".alert-danger span").text(text);
+        $(".alert-danger").fadeIn();
+        $("#disabled").attr('id', 'get').text('Get');
+        return false;
+    }
+
+    //unlim :) like: 50k+, repost: 2k+ у репостов под конец undefined, comments: 500+ только уникальные пользователи
+    function getLikes(gropeId, postId, filter, offset, filter2, filter3) {
+        var url = "https://api.vk.com/method/likes.getList";
+        var count = 1000;
+        var data = { type: "post", owner_id: gropeId, item_id: postId, filter: filter, offset: offset, count: count, extended: 1, v: 5.41};
+        var info = 'items';
+
+        if ( filter == "comments" ) {
+            url = "https://api.vk.com/method/wall.getComments";
+            count = 100;
+            data = { owner_id: gropeId, post_id: postId, offset: offset, count: count, extended: 1, v: 5.41};
+            info = 'profiles';
+        }
+
+        $.ajax({
+            url: url,
+            data: data,
+            dataType: 'jsonp',
+            success: function (data) {
+                var structInfo = getPeopleInfo(data, info);
+
+                if (!structInfo) {
+                    return false;
+                }
+
+                resultArr = pushArray( resultArr, structInfo );
+
+                var newOffset = +offset + count;
+                if( data.response.count > newOffset ) {
+                    console.log("Полученно " + newOffset + " из " + data.response.count);
+                    getLikes(gropeId, postId, filter, newOffset, filter2, filter3);
+                } else {
+                    if (filter2) {
+                        resultArrFilter1 = resultArr;
+                        resultArr = [];
+                        getLikes(gropeId, postId, filter2, 0, false, filter3);
+                    } else {
+                        if (resultArrFilter1.length) {
+                            resultArr = arrayCrossing(resultArrFilter1, resultArr);
+                            resultArrFilter1 = [];
+                        }
+                        if (filter3) {
+                            resultArrFilter1 = resultArr;
+                            resultArr = [];
+                            getLikes(gropeId, postId, filter3, 0, false, false);
+                        }
+                        if (!filter2 && !filter3) {
+                            isMemberAndShow(resultArr, gropeId);
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function getPeopleInfo(data, info) {
+        try {
+            var Arr = [];
+            if (info == "isMember") {
+                for (var k = 0; k < data.response.length; k++) {
+                    Arr[k] = [];
+                    Arr[k].push(data.response[k].member);
+                    Arr[k].push(data.response[k].user_id);
+                }
+            } else {
+                for (var i = 0; i < data.response[info].length; i++) {
+                    Arr[i] = [];
+                    Arr[i].push(data.response[info][i].id);
+                    Arr[i].push(data.response[info][i].first_name);
+                    Arr[i].push(data.response[info][i].last_name);
+                }
+            }
+
+            return Arr;
+        }
+        catch (err) {
+            console.log(err);
+            errorAlert('Не найдено подходящих данных. Пожалуйста, проверьте правильная ли ссылка.');
+            return false;
+        }
+    }
+
+    function isMemberAndShow(people, gropeId) {
+        if (isMember) {
+            var arrStrPeople500 = arrToStr500(people);
+            isMemberFunc(people, gropeId, arrStrPeople500, 0);
+        } else {
+            showPeople(people);
+        }
+    }
+
+    function isMemberFunc(people, gropeId, arrStrPeople500, offset) {
+        var strPeople = arrStrPeople500[offset];
+        $.ajax({
+            url: "https://api.vk.com/method/groups.isMember",
+            data: { group_id: Math.abs(gropeId), user_ids: strPeople, v: 5.44 },
+            dataType: 'jsonp',
+            success: function (data) {
+                isMemberArr = pushArray( isMemberArr, getPeopleInfo(data, "isMember") );
+
+                if(arrStrPeople500.length - 1 > offset) {
+                    console.log("Обработанно " + (offset + 1) * 300 + " из " + people.length);
+                    isMemberFunc(people, gropeId, arrStrPeople500, offset + 1);
+                } else {
+                    var crossing = arrayCrossing(people, isMemberArr, "isMember");
+                    showPeople(crossing);
+                }
+            }
+        });
+    }
+
+    function showPeople(people) {
+        for (var j = 0; j < people.length; j++) {
+            if (people[j][1]) {
+                lineNumber++;
+                $("table tbody").append("<tr><td>" + lineNumber + "</td>");
+                console.log("Построение таблицы");
+                for (var k = 0; k < people[j].length; k++) {
+                    if (k == 0) {
+                        $("table tbody tr:last").append("<td><a target='_blank' href='http://vk.com/id" + people[j][k] + "'>" + people[j][k] + "</a></td>");
+                    } else {
+                        $("table tbody tr:last").append("<td>" + people[j][k] + "</td>");
+                    }
+                }
+            }
+        }
+
+        $("#disabled").attr('id', 'get');
+        $("#get").text('Get');
+        $("#results").fadeIn();
+    }
+
+    function arrayCrossing(arr1, arr2, filter) {
+        var crossing = [];
+
+        for (var i = 0; i < arr1.length; i++) {
+            for (var k = 0; k < arr2.length; k++) {
+                if (filter == "isMember" && (arr1[i][0] == arr2[k][1]) && arr2[k][0]) {
+                    crossing.push(arr1[i]);
+                } else if (arr1[i][0] == arr2[k][0]) {
+                    crossing.push(arr1[i]);
+                }
+            }
+        }
+
+        return crossing;
+    }
+
+    //max 300 one time
+    function arrToStr500(array) {
+        var newArr = [];
+
+        for (var k = 0; k <= Math.floor(array.length / 300); k++) {
+            newArr[k] = [];
+            for (var i = k * 300; i < k * 300 + 300 && i < array.length; i++) {
+                newArr[k].push(array[i][0]);
+            }
+            newArr[k] = newArr[k].join(',');
+        }
+
+        return newArr;
+    }
+
+    function pushArray(resArr, array) {
+        for (var i = 0; i < array.length; i++) {
+            resArr.push(array[i]);
+        }
+        return resArr;
+    }
+
+    function getIdFromLink(link) {
+        if (getURLParameter("w", link)) {
+            link = getURLParameter("w", link).substr(4);//cut "wall"
+        } else {
+            link = link.substr(link.indexOf('wall') + 4);
+        }
+        var arrId = link.split('_');
+        return arrId;
+    }
+
+    function getURLParameter(name, link) {
+        return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(link)||[,null])[1] || ''
+        );
+    }
+
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+</script>
+</body>
+</html>

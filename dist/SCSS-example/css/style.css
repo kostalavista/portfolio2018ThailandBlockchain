@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; }
+
+.block1 {
+  width: 200px;
+  background-color: #eee;
+  color: #000;
+  border: 1px solid #000;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 25px; }
+  .block1 h3 {
+    color: green;
+    font-size: 18px;
+    margin: 0 20px 20px 20px; }
+  .block1 img {
+    float: left;
+    width: 100px;
+    margin: 0 10px 10px 0; }
+
+.block2 {
+  width: 300px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 25px; }
+  .block2 h3 {
+    color: yellow;
+    font-size: 18px;
+    margin: 0 20px 20px 20px; }
+  .block2 img {
+    float: left;
+    width: 100px;
+    margin: 0 10px 10px 0; }
+
+.block3 {
+  width: 400px;
+  background-color: #f1f1f1;
+  color: red;
+  border: 1px solid red;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 25px; }
+  .block3 h3 {
+    color: red;
+    font-size: 18px;
+    margin: 0 20px 20px 20px; }
+  .block3 img {
+    float: left;
+    width: 100px;
+    margin: 0 10px 10px 0; }
+  .block3 img {
+    float: right;
+    width: 50%;
+    margin: 0 0 0 5px; }
+
+/*# sourceMappingURL=style.css.map */

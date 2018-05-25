@@ -1,0 +1,150 @@
+.bg-auto-1 {
+	background: url("../../img/auto-bg-1.jpg") 50% no-repeat;
+}
+.main__sub-desc_auto {
+	font-family: "MullerLight", sans-serif;
+}
+.main__head_auto {
+	padding: 45px 0 0;
+}
+.article__text_long {
+	max-height: none;
+}
+.article__title_auto {
+	margin: 0 0 25px 0;
+	letter-spacing: 0;
+	text-transform: none;
+	font: 29px/34px "MullerMedium", sans-serif;
+}
+.article__img_auto {
+	display: block;
+	width: 350px;
+	margin-bottom: 20px;
+}
+.article__img_auto:last-child {
+	margin-bottom: 0;
+	margin-right: 90px;
+}
+.article__info_auto {
+	padding-bottom: 50px;
+}
+.more-auto {
+	display: flex;
+}
+.more-auto__btn1 {
+	min-width: 300px;
+}
+.more-auto__btn2 {
+	min-width: 200px;
+	padding: 12px 0 11px;
+	margin-left: 15px;
+}
+.about {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	text-align: left;
+	color: #ffffff;
+}
+.about__img-wrap {
+	min-width: 100px;
+	text-align: center;
+}
+.about__img {
+	max-width: 65px;
+	margin-right: 25px;
+}
+.about__title {
+	margin-bottom: 20px;
+	font-size: 20px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-family: "MullerBold", sans-serif;
+}
+.about__text {
+	font-size: 16px;
+}
+.about__item {
+	display: flex;
+	align-items: flex-start;
+	max-width: 550px;
+	margin-bottom: 80px;
+	width: 100%;
+}
+.watch-all {
+	text-align: center;
+	color: #fff;
+	padding-bottom: 40px;
+}
+.about-us {
+	position: relative;
+	z-index: 1;
+	padding: 80px 0;
+}
+.article-group_vertical {
+	display: flex;
+}
+.article_vertical {
+	position: relative;
+	flex-direction: column;
+	margin-right: 20px;
+	max-width: calc(33% - 20px);
+}
+.article_vertical:last-child {
+	margin-right: 0;
+}
+.article__img_vertical {
+	max-width: none;
+	width: 100%;
+	margin: 0 0 50px 0;
+}
+.article__more_vertical {
+	bottom: -30px;
+}
+.decision {
+	display: flex;
+	justify-content: space-between;
+}
+.decision__item {
+	width: 100%;
+	max-width: 280px;
+	margin: 0 20px 40px;
+	text-align: center;
+}
+.decision__wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 140px;
+	height: 140px;
+	margin: 0 auto 40px;
+	border-radius: 3px;
+	background-color: #ffc000;
+}
+.decision__title {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-family: "MullerBold", sans-serif;
+	line-height: 24px;
+}
+.decision__text {
+	font-size: 16px;
+	line-height: 20px;
+}
+.content-title_dark {
+	color: #fff;
+	padding-bottom: 20px;
+}
+.form_horiz {
+	padding: 20px 0 80px;
+	display: flex;
+	justify-content: space-between;
+}
+.input_horiz {
+	margin-right: 20px;
+}
+.auto-article {
+	padding-top: 20px;
+}

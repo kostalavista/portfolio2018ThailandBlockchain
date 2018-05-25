@@ -1,0 +1,31 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    overflow-y:scroll;
+}
+.subscr {
+    font-weight: 300;
+}
+#results {
+    display: none;
+    font-family: 'Arial', sans-serif;
+}
+#results a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+}
+#get {
+    margin: 12px 0 8px 0;
+}
+#disabled {
+    margin: 12px 0 8px 0;
+    background-color: #f1f1f1;
+    padding: 0 10px;
+}
+.alert-danger {
+    display: none;
+}

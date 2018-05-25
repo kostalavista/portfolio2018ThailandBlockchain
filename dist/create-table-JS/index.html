@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Table JS</title>
+    <style>
+        .errDate {
+            color: #aaa;
+            font-size: 10px;
+        }
+
+        .colorRed {
+            color: red;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<button onclick="createTable('getFields.json')">Построение по всем полям, без сортировки</button>
+<button onclick="createTable('getFields.json', ['name', 'weight', 'point'], 'weight')">Построение по полям: 'name', 'weight', 'point', без сортировки</button>
+<button onclick="createTable('getFields.json', ['name', 'point', 'errDate'], 'point')">Построение по полям 'name', 'point', 'errDate' , сортировка по 'point'</button>
+<script>
+    function createTable(jsonUrl, fields, sortBy) {
+        var tableFields = [], nameField;
+
+        var body = document.getElementsByTagName('body')[0];
+        var table = document.createElement('table');
+        var thead = document.createElement('thead');
+        var tbody = document.createElement('tbody');
+        table.setAttribute('width', '100%');
+        table.setAttribute('border', '1');
+
+        var xhr = getXmlHttp();
+
+        xhr.open('GET', jsonUrl, true);
+        xhr.send();
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState != 4) return;
+            if (xhr.status != 200) {
+                alert(xhr.status + ': ' + xhr.statusText);
+            } else {
+                tableFields = JSON.parse(xhr.responseText).fields;
+
+                //Если пользователь не ввел по каким именно полям строить таблицу - то строим по всем
+                if (!fields) {
+                    var createAllFields = true
+                }
+
+                //Сортировка массива по указанному полю
+                if (sortBy) {
+                    tableFields.sort(function (a, b) {
+                        if (a[sortBy] > b[sortBy]) return 1;
+                        if (a[sortBy] < b[sortBy]) return -1;
+                    })
+                }
+
+                Object.keys(tableFields[0]).forEach(function (key) {//формирование thead
+                    if (createAllFields == true || find(fields, key)) {//по каким полям строить
+                        if (key != "errDate") { //errDate отображается в поле name
+                            var th = document.createElement('th');
+                            th.innerHTML = key;
+                            thead.appendChild(th);
+                        }
+                    }
+                });
+
+                Object.keys(tableFields).forEach(function (key) {//формирование tbody
+                    var val = tableFields[key];
+                    var tr = document.createElement('tr');
+                    Object.keys(val).forEach(function (key) {
+                        if (createAllFields == true || find(fields, key)) {//по каким полям строить
+                            if (key == "errDate") {
+                                nameField.innerHTML += ' <span class="errDate">(' + val[key] + ')</span>';
+                            } else {
+                                var td = document.createElement('td');
+                                td.innerHTML = val[key];
+                                //Добавление класса "colorRed" к ячейке, если значение не меньше 1
+                                if (key == "point" && val[key] >= 1) td.classList.add("colorRed");
+                                tr.appendChild(td);
+                                if (key == "name") nameField = td;
+                            }
+                        }
+                    });
+                    tbody.appendChild(tr);
+                });
+
+                table.appendChild(thead);
+                table.appendChild(tbody);
+                body.appendChild(table);
+            }
+        };
+    }
+
+    //Содержится ли value в array
+    function find(array, value) {
+
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] == value || array == value)
+                return value;
+        }
+        return 0;
+
+    }
+
+    //Кроссбраузерная функция создания XMLHttpRequest:
+    function getXmlHttp() {
+        var xmlhttp;
+        try {
+            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (E) {
+                xmlhttp = false;
+            }
+        }
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+            xmlhttp = new XMLHttpRequest();
+        }
+        return xmlhttp;
+    }
+
+</script>
+</body>
+</html>

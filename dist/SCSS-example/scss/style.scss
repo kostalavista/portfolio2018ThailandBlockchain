@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+@mixin block($size, $bg_color, $color, $h3_color) {
+  width: $size;
+  background-color: $bg_color;
+  color: $color;
+  border: 1px solid $color;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 25px;
+  h3 {
+    color: $h3_color;
+    font-size: 18px;
+    margin: 0 20px 20px 20px;
+  }
+  img {
+    float: left;
+    width: 100px;
+    margin: 0 10px 10px 0;
+  }
+}
+
+.block1 {
+  @include block(200px, #eee, #000, green);
+}
+
+.block2 {
+  @include block(300px, #333, #fff, yellow);
+}
+
+.block3 {
+  @include block(400px, #f1f1f1, red, red);
+  img {
+    float: right;
+    width: 50%;
+    margin: 0 0 0 5px;
+  }
+}
