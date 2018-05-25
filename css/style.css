@@ -7,6 +7,8 @@ h1 {
 	font-weight: 600;
 	text-align: center;
 	color: #202020;
+	font-size: 26px;
+	margin: 15px 0;
 }
 h2 {
 	font-size: 22px;
@@ -15,6 +17,7 @@ h3 {
 	font-size: 22px;
 	text-align: center;
 	color: #5b5b5b;
+	margin: 10px 0;
 }
 a {
 	text-decoration: underline;
